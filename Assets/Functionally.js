@@ -582,7 +582,7 @@ function renderOfflinePage() {
       <img src="https://static.wixstatic.com/media/66c613_3454970f97e64b04a7cac86647b7a4ef~mv2.png" alt="Illustration of a computer screen with maintenance tools and a caution sign" class="w-full h-auto rounded-md" />
       <h1 class="text-4xl font-extrabold mb-4 text-indigo-400">We'll be back soon!</h1>
       <p class="text-lg max-w-md mb-6 text-indigo-300">Our website is currently undergoing scheduled maintenance. We apologize for the inconvenience and appreciate your patience. Please check back later.</p>
-      <p class="status-link text-indigo-400 text-ig">Please visit our <a href="https://games-status.instatus.com/" target="_blank" rel="noopener noreferrer" class="underline hover:text-indigo-200 focus:outline-none focus:ring-2 focus:ring-indigo-400 rounded">Status Page</a> for more information</p>
+      <p class="status-link text-indigo-400 text-ig">Please visit our <a href="https://status-gamelightfam.instatus.com/" target="_blank" rel="noopener noreferrer" class="underline hover:text-indigo-200 focus:outline-none focus:ring-2 focus:ring-indigo-400 rounded">Status Page</a> for more information</p>
     </div>
   </section>
   `;
