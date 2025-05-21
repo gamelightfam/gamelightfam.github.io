@@ -101,7 +101,7 @@ const footerHTML = `
       </div>
     </div>
     <div class="border-t border-indigo-700 text-center py-4 text-sm text-indigo-400 select-none">
-      © 2024 GamingLightFam Inc. All Rights Reserved.
+      © 2025 GameLightFam Inc. All Rights Reserved.
     </div>
   </footer>
 `;
