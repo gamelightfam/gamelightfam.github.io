@@ -1,4 +1,4 @@
-const siteOnline = false;
+const siteOnline = true;
 
 const gamesData = [
   {
