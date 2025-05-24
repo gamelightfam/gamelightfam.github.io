@@ -1,31 +1,30 @@
 const siteOnline = true;
 
 const gamesData = [
-  {
-    name: "PrisonBreak Life",
+    name: "FREE ADMIN",
     image:
-      "https://tr.rbxcdn.com/180DAY-6b238cce37260ba55a59430d2ad095d0/150/150/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-b0c3cfa83c9b22a66f99ab2c86b255c3/150/150/Image/Webp/noFilter",
     description:
-      "PrisonBreak Life is a prison game where you can orchestrate stopping criminals before they get away! Team up with friends for even more fun. What role will you play? <br> <br> Live as a prisoner and escape, or become a guard and defend the prison!",
+      "Welcome to Free Admin! You have cool Admin Powers, which allow you to do awesome Admin Commands <br> <br> ❓The Prefix is ; <be> 💬 Type ;cmds to view all Admin Commands! <be><be> 🔨 FREE ADMIN 💥 allows you to: <be> ⭐ Play with Admin Commands! <be> 🗡️💣🔫 Fight with Hundreds of Free Powerful Gears! <be> 😎💬 Chat and Play with Others!",
     screenshots: [
-      "https://tr.rbxcdn.com/180DAY-bc2d6c2cb59007f9b93587fa1e7a9851/768/432/Image/Webp/noFilter",
-      "https://tr.rbxcdn.com/180DAY-60d14d68fb371ba9c29736e998ac632e/768/432/Image/Png/noFilter",
+      "https://tr.rbxcdn.com/180DAY-dab6a3eb758071f5904839f6232576c1/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-c584bc3a17518be78f0d874cbae00f77/768/432/Image/Webp/noFilter",
     ],
     genre: "Action, Roleplay",
     subgenre: "Open World Action",
     players: "Up to 25 players",
     developer: "GameLightFam Studios",
     releaseDate: "2025-5-21",
-    placeId: "11839697811",
+    placeId: "110271545001533",
     specifications: {
       Genre: "Action, Roleplay",
-      Subgenre: "Open World Action",
-      Players: "Up to 25 players",
+      Subgenre: "Battlegrounds & Fighting",
+      Players: "Up to 10 players",
       Developer: "GameLightFam Studios",
-      "Release Date": "2022-12-17",
+      "Release Date": "2025-5-21",
     },
-    maturity: "Violence (Mild/Occasional)",
-    isPublic: false
+    maturity: "MildViolence (Mild/Repeated), Crude humor (Mild)",
+    isPublic: true
   },
 ];
 
