@@ -6,7 +6,7 @@ const gamesData = [
     image:
       "https://tr.rbxcdn.com/180DAY-b0c3cfa83c9b22a66f99ab2c86b255c3/150/150/Image/Webp/noFilter",
     description:
-      "Welcome to Free Admin! You have cool Admin Powers, which allow you to do awesome Admin Commands <br> <br> ❓The Prefix is ; <be> 💬 Type ;cmds to view all Admin Commands! <be><be> 🔨 FREE ADMIN 💥 allows you to: <be> ⭐ Play with Admin Commands! <be> 🗡️💣🔫 Fight with Hundreds of Free Powerful Gears! <be> 😎💬 Chat and Play with Others!",
+      "Welcome to Free Admin! You have cool Admin Powers, which allow you to do awesome Admin Commands <br> <br> ❓The Prefix is ; <br> 💬 Type ;cmds to view all Admin Commands! <br><br> 🔨 FREE ADMIN 💥 allows you to: <be> ⭐ Play with Admin Commands! <br> 🗡️💣🔫 Fight with Hundreds of Free Powerful Gears! <br> 😎💬 Chat and Play with Others!",
     screenshots: [
       "https://tr.rbxcdn.com/180DAY-dab6a3eb758071f5904839f6232576c1/768/432/Image/Webp/noFilter",
       "https://tr.rbxcdn.com/180DAY-c584bc3a17518be78f0d874cbae00f77/768/432/Image/Webp/noFilter",
