@@ -24,7 +24,7 @@ const gamesData = [
       Developer: "GameLightFam Studios",
       "Release Date": "2025-5-21",
     },
-    maturity: "MildViolence (Mild/Repeated), Crude humor (Mild)",
+    maturity: "Violence (Mild/Repeated), Crude humor (Mild)",
     isPublic: true
   },
 ];
