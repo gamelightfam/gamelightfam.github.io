@@ -1,6 +1,7 @@
 const siteOnline = true;
 
 const gamesData = [
+    {
     name: "FREE ADMIN",
     image:
       "https://tr.rbxcdn.com/180DAY-b0c3cfa83c9b22a66f99ab2c86b255c3/150/150/Image/Webp/noFilter",
