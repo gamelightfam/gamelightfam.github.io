@@ -27,6 +27,33 @@ const gamesData = [
     maturity: "Violence (Mild/Repeated), Crude humor (Mild)",
     isPublic: true
   },
+
+  {
+    name: "PrisonBreak Life",
+    image:
+      "https://tr.rbxcdn.com/180DAY-dfe1e03f05f528587fb01894242b8aaa/150/150/Image/Webp/noFilter",
+    description:
+      "Live life as a prisoner and escape, or become a guard and defend the prison! <br> <br> PrisonBreak Life is a prison game where you can orchestrate catch criminals! Team up with friends for even more fun and plan the ultimate police raid or criminal. What role will you play?",
+    screenshots: [
+      "https://tr.rbxcdn.com/180DAY-f2313fc38eb1ac6e4eaba70238fda964/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-c2ab1668772b21ff2367965ff0698426/768/432/Image/Webp/noFilter",
+    ],
+    genre: "Action, Roleplay",
+    subgenre: "Open World Action",
+    players: "Up to 24 players",
+    developer: "GameLightFam Studios",
+    releaseDate: "2025-7-5",
+    placeId: "102996244873668",
+    specifications: {
+      Genre: "Action, Roleplay",
+      Subgenre: "Open World Action",
+      Players: "Up to 24 players",
+      Developer: "GameLightFam Studios",
+      "Release Date": "2025-5-21",
+    },
+    maturity: "Mild Violence (Repeated/Mild)",
+    isPublic: true
+  },
 ];
 
 const comingSoonGames = [];
@@ -420,8 +447,7 @@ function renderHome() {
       <p>Stay connected with GamingLightFam Studios through our Facebook page. Get the latest updates, community events, and behind-the-scenes content. Join the conversation and be part of our growing community!</p>
     </div>
     <div class="whats-up-iframe-wrapper flex-1 flex justify-center">
-      <iframe allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen scrolling="no" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FGamingLightFam&amp;tabs=timeline&amp;width=400&amp;height=500&amp;small_header=false&amp;adapt_container_width=true&amp;hide_cover=false&amp;show_facepile=true&amp;appId" title="Facebook timeline feed of GamingLightFam Studios" class="rounded-md shadow-lg w-full max-w-md h-[500px] border-0"></iframe>
-    </div>
+<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fgamelightfam&tabs=timeline&width=340&height=495&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="340" height="495" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>    </div>
   </section>
   <h2 class="home-section-title text-center text-indigo-400 font-orbitron mt-16 mb-8 select-none">Featured Games</h2>
   <section class="home-games-grid max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-4">
