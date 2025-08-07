@@ -1,4 +1,4 @@
-  const siteOnline = true;
+  const siteOnline = false;
 
     const gamesData = [
         {
@@ -750,3 +750,4 @@
       document.getElementById("main-content").addEventListener("click", handleGameLinkClick);
       initialLoad();
     });
+
