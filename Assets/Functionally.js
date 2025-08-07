@@ -1,4 +1,4 @@
-const siteOnline = false;
+const siteOnline = true;
 
 const gamesData = [
     {
@@ -755,4 +755,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
 const blogId = "4111203618850589496";
 const apiKey = "AIzaSyAZkglEMtvwYhU_EBNWf3PE8nDHm4S-qbk";
+
 
