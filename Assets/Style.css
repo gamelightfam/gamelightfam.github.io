@@ -1,288 +1,225 @@
-html, body, #app {
-      height: 100%;
-      margin: 0;
+body {
       font-family: 'Roboto', sans-serif;
       background-color: #1e293b;
-      color: #cbd5e1;
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
-      min-height: 100vh;
-      -webkit-tap-highlight-color: transparent;
-      -webkit-text-size-adjust: 100%;
-      -ms-text-size-adjust: 100%;
-      text-size-adjust: 100%;
     }
     .font-orbitron {
       font-family: 'Orbitron', sans-serif;
     }
-    /* Scrollbar styling for screenshots and news */
-    .scrollbar-thin {
-      scrollbar-width: thin;
-      scrollbar-color: #7c3aed #1e293b;
-    }
+    /* Scrollbar for screenshots thumbnails */
     .scrollbar-thin::-webkit-scrollbar {
       height: 8px;
-      width: 8px;
     }
     .scrollbar-thin::-webkit-scrollbar-track {
       background: #1e293b;
-      border-radius: 4px;
+      border-radius: 9999px;
     }
     .scrollbar-thin::-webkit-scrollbar-thumb {
       background-color: #7c3aed;
-      border-radius: 4px;
+      border-radius: 9999px;
     }
-    /* FAQ answer open max-height */
+    /* FAQ transition */
     .faq-answer.open {
-      max-height: 1000px !important;
+      transition: max-height 0.3s ease-in-out;
     }
     /* Buttons */
     .play-btn {
       background-color: #7c3aed;
       color: #e0e7ff;
-      font-weight: 600;
-      padding: 0.5rem 1.25rem;
-      border-radius: 0.375rem;
+      padding: 0.75rem 1.5rem;
+      border-radius: 9999px;
+      font-weight: 700;
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
-      transition: background-color 0.3s ease;
+      box-shadow: 0 0 10px #7c3aedaa;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
       user-select: none;
-      text-decoration: none;
-      white-space: nowrap;
+      width: 100%;
+      justify-content: center;
     }
     .play-btn:hover,
     .play-btn:focus {
       background-color: #a78bfa;
-      outline-offset: 2px;
-      outline: 2px solid #a78bfa;
-      color: #1e293b;
+      box-shadow: 0 0 20px #a78bfaaa;
+      outline: none;
     }
     .btn-back {
       background-color: transparent;
       color: #a5b4fc;
       font-weight: 600;
       padding: 0.5rem 1rem;
-      border-radius: 0.375rem;
+      border-radius: 0.5rem;
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
       border: 2px solid transparent;
-      transition: border-color 0.3s ease, color 0.3s ease;
+      transition: color 0.3s ease, border-color 0.3s ease;
       user-select: none;
-      text-decoration: none;
-      white-space: nowrap;
+      width: 100%;
+      justify-content: center;
+      margin-top: 0.75rem;
     }
     .btn-back:hover,
     .btn-back:focus {
-      border-color: #a78bfa;
-      color: #a78bfa;
-      outline-offset: 2px;
-      outline: 2px solid #a78bfa;
+      color: #7c3aed;
+      border-color: #7c3aed;
+      outline: none;
     }
-    .cta-btn {
-      background-color: #a78bfa;
-      color: #1e293b;
-      font-weight: 700;
-      padding: 0.75rem 1.5rem;
-      border-radius: 0.5rem;
-      transition: background-color 0.3s ease;
-      user-select: none;
-      text-decoration: none;
-      white-space: nowrap;
-    }
-    .cta-btn:hover,
-    .cta-btn:focus {
-      background-color: #c4b5fd;
-      outline-offset: 2px;
-      outline: 2px solid #c4b5fd;
-      color: #1e293b;
-    }
-    /* Home banner text shadow */
-    .full-width-banner h1 {
-      text-shadow: 0 0 8px #a78bfa;
-    }
-    /* Coming soon label */
+    /* Coming Soon label */
     .coming-soon-label {
       position: absolute;
-      top: 0.5rem;
-      right: 0.5rem;
+      top: 1rem;
+      left: 1rem;
       background: #a78bfa;
       color: #1e293b;
       font-weight: 700;
-      font-size: 0.75rem;
-      padding: 0.25rem 0.5rem;
-      border-radius: 0.375rem;
+      padding: 0.25rem 0.75rem;
+      border-radius: 9999px;
+      font-size: 0.875rem;
       user-select: none;
-      pointer-events: none;
-      font-family: 'Orbitron', sans-serif;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
+      box-shadow: 0 0 8px #a78bfaaa;
+      z-index: 10;
     }
     /* News date overlay */
     .news-date-overlay {
       position: absolute;
       bottom: 0.5rem;
-      left: 0.5rem;
+      right: 0.5rem;
       background: rgba(124, 58, 237, 0.85);
       color: #e0e7ff;
       font-size: 0.75rem;
       font-weight: 600;
-      padding: 0.15rem 0.5rem;
+      padding: 0.25rem 0.5rem;
       border-radius: 0.375rem;
       user-select: none;
-      font-family: 'Orbitron', sans-serif;
-      pointer-events: none;
+      box-shadow: 0 0 6px #7c3aedcc;
     }
-    /* News post image container */
+    /* Home banner text shadow */
+    .text-shadow-lg {
+      text-shadow: 0 0 12px #a78bfa;
+    }
+    /* Focus ring override for better visibility */
+    a:focus, button:focus, input:focus, textarea:focus {
+      outline-offset: 2px;
+    }
+    /* Game details layout improvements */
+    .game-details-main {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+    @media (min-width: 768px) {
+      .game-details-main {
+        flex-direction: row;
+      }
+    }
+    /* Screenshot thumbnails container */
+    .thumbnails-container {
+      display: flex;
+      gap: 0.75rem;
+      overflow-x: auto;
+      padding-top: 0.5rem;
+      scrollbar-width: thin;
+      scrollbar-color: #7c3aed #1e293b;
+    }
+    .thumbnails-container::-webkit-scrollbar {
+      height: 8px;
+    }
+    .thumbnails-container::-webkit-scrollbar-track {
+      background: #1e293b;
+      border-radius: 9999px;
+    }
+    .thumbnails-container::-webkit-scrollbar-thumb {
+      background-color: #7c3aed;
+      border-radius: 9999px;
+    }
+    /* Thumbnail selected border */
+    .thumbnail-selected {
+      border-color: #a78bfa !important;
+      box-shadow: 0 0 8px #a78bfaaa;
+    }
+    /* Description rich text styling */
+    .game-description p {
+      margin-bottom: 1rem;
+    }
+    /* Specifications grid */
+    .specs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(140px,1fr));
+      gap: 1.5rem 3rem;
+      color: #c7d2fe;
+      font-weight: 600;
+    }
+    .specs-grid div span:first-child {
+      color: #a78bfa;
+      font-weight: 700;
+      user-select: text;
+    }
+    /* Newswire cards */
     .news-post-image-container {
       position: relative;
       overflow: hidden;
-      border-radius: 0.5rem;
-      max-height: 180px;
+      border-radius: 1rem;
+      box-shadow: 0 0 15px #7c3aedaa;
     }
-    .news-post-image-container img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 0.5rem;
+    /* FAQ icons rotation */
+    .faq-question[aria-expanded="true"] .icon i {
+      transform: rotate(180deg);
       transition: transform 0.3s ease;
     }
-    .post:hover .news-post-image-container img,
-    .post:focus-within .news-post-image-container img {
-      transform: scale(1.05);
+    .faq-question[aria-expanded="false"] .icon i {
+      transform: rotate(0deg);
+      transition: transform 0.3s ease;
     }
-    /* Game card hover */
-    article.home-game-card:hover,
-    article.home-game-card:focus-within,
-    article.bg-indigo-800:hover,
-    article.bg-indigo-800:focus-within {
-      box-shadow: 0 0 15px 3px #a78bfa;
-      outline: none;
-      border-radius: 0.75rem;
-      transition: box-shadow 0.3s ease;
-      z-index: 10;
-      position: relative;
-    }
-    /* Game details screenshot thumbnails */
-    img[data-index].border-indigo-400 {
-      border-color: #a78bfa !important;
-      box-shadow: 0 0 8px #a78bfa;
-    }
-    /* Accessibility focus */
-    a:focus-visible,
-    button:focus-visible,
-    input:focus-visible,
-    textarea:focus-visible {
-      outline-offset: 2px;
-      outline: 2px solid #a78bfa;
-      outline-style: solid;
-    }
-    /* Prose overrides for dark mode */
-    .prose-indigo a {
-      color: #a78bfa;
-      text-decoration: underline;
-    }
-    .prose-indigo a:hover,
-    .prose-indigo a:focus {
-      color: #c4b5fd;
-      outline-offset: 2px;
-      outline: 2px solid #c4b5fd;
+    /* Contact form inputs */
+    input[type="text"], input[type="email"], textarea {
+      font-family: inherit;
+      font-size: 1rem;
     }
     /* Responsive iframe wrapper */
-    .whats-up-iframe-wrapper iframe {
-      border-radius: 0.5rem;
-      box-shadow: 0 0 15px 3px #7c3aed;
-      max-width: 100%;
-      height: 520px;
+    .iframe-wrapper {
+      width: 100%;
+      max-width: 360px;
+      border-radius: 1rem;
+      overflow: hidden;
+      box-shadow: 0 0 20px #7c3aedaa;
     }
-    /* Hide scrollbar for Firefox */
-    .scrollbar-thin {
-      scrollbar-width: thin;
-      scrollbar-color: #a78bfa transparent;
+    /* New styles for details page title area */
+    .details-header {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
     }
-    /* Mobile improvements */
-    @media (max-width: 640px) {
-      .play-btn, .btn-back, .cta-btn {
-        font-size: 1rem;
-        padding: 0.5rem 1rem;
-      }
-      .home-game-card img {
-        height: 36vw !important;
-      }
-      .home-game-card-content h3 {
-        font-size: 1.25rem;
-      }
-      .home-game-card-content p {
-        font-size: 0.875rem;
-      }
-      .full-width-banner {
-        padding: 3rem 1.5rem;
-      }
-      .full-width-banner h1 {
-        font-size: 2.5rem;
-        line-height: 1.2;
-      }
-      .full-width-banner p {
-        font-size: 1rem;
-      }
-      nav ul#nav-links {
-        display: none !important;
-      }
-      nav button#menu-toggle {
-        display: flex !important;
-      }
-      #mobile-nav-links {
-        display: flex !important;
-        position: absolute;
-        top: 64px;
-        right: 0;
-        background: rgba(30, 41, 59, 0.95);
-        width: 100vw;
-        max-width: 320px;
-        height: calc(100vh - 64px);
-        flex-direction: column;
-        padding: 2rem 1.5rem;
-        z-index: 1000;
-        overflow-y: auto;
-        transition: transform 0.3s ease;
-        transform: translateX(0);
-      }
-      #mobile-nav-links.hidden {
-        transform: translateX(100%);
-      }
-      #mobile-nav-links a {
-        font-size: 1.25rem;
-        padding: 0.75rem 0;
-      }
-      .whats-up-iframe-wrapper iframe {
-        height: 360px;
-        width: 100%;
-      }
-      main#main-content {
-        padding-left: 1rem;
-        padding-right: 1rem;
-      }
-      .btn-group {
-        flex-direction: column;
-        gap: 1rem;
-      }
-      .btn-group a.play-btn, .btn-group a.btn-back, .btn-group span {
-        width: 100%;
-        justify-content: center;
-      }
-      .home-games-grid {
-        grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
-      }
-      .game-image-container img {
-        height: auto !important;
-      }
-      .faq-question {
-        font-size: 1rem;
-        padding: 1rem 1rem;
-      }
-      .faq-answer {
-        font-size: 0.9rem;
-        padding: 0.75rem 1rem;
-      }
+    .details-header > h2 {
+      font-size: 3.25rem;
+      font-weight: 800;
+      color: #c4b5fd;
+      font-family: 'Orbitron', sans-serif;
+      user-select: text;
+      line-height: 1.1;
+    }
+    .details-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem 2.5rem;
+      color: #a78bfa;
+      font-weight: 600;
+      font-size: 1.125rem;
+      user-select: text;
+    }
+    .details-meta span {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.2;
+    }
+    .details-meta span label {
+      font-size: 0.875rem;
+      color: #7c3aed;
+      font-weight: 700;
+      user-select: none;
+      margin-bottom: 0.15rem;
     }
