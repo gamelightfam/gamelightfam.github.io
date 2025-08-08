@@ -591,7 +591,7 @@
       return `
       <section class="offline-container min-h-screen text-indigo-200 flex flex-col justify-center items-center p-6 text-center font-orbitron select-none">
         <div class="flex flex-col items-center justify-center max-w-xs w-full">
-          <img src="https://placehold.co/400x300/png?text=Maintenance+Illustration+with+computer+and+caution+sign+in+purple+blue+neon" alt="Illustration of a computer screen with maintenance tools and a caution sign in neon purple and blue" class="w-full h-auto rounded-2xl shadow-lg" />
+          <img src="https://static.wixstatic.com/media/66c613_3454970f97e64b04a7cac86647b7a4ef~mv2.png" alt="Illustration of a computer screen with maintenance tools and a caution sign in neon purple and blue" class="w-full h-auto rounded-2xl shadow-lg" />
           <h1 class="text-5xl font-extrabold mb-6 text-indigo-400 mt-8">We'll be back soon!</h1>
           <p class="text-lg max-w-md mb-8 text-indigo-300">Our website is currently undergoing scheduled maintenance. We apologize for the inconvenience and appreciate your patience. Please check back later.</p>
           <p class="status-link text-indigo-400 text-lg">Please visit our <a href="https://status-gamelightfam.instatus.com/" target="_blank" rel="noopener noreferrer" class="underline hover:text-indigo-200 focus:outline-none focus:ring-2 focus:ring-indigo-400 rounded">Status Page</a> for more information</p>
@@ -750,4 +750,5 @@
       document.getElementById("main-content").addEventListener("click", handleGameLinkClick);
       initialLoad();
     });
+
 
