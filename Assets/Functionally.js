@@ -69,20 +69,7 @@
   const comingSoonGames = [];
 
   // Blog posts data for Newswire and Blog Post pages
-  const blogPosts = [
-    {
-      id: "post1",
-      title: "GameLightFam Launches FREE ADMIN - Experience Admin Powers!",
-      date: "2025-04-10",
-      image: "https://placehold.co/600x300/png?text=FREE+ADMIN+Launch+Announcement+with+neon+purple+and+blue+theme",
-      content: `
-        <p>We are thrilled to announce the launch of <strong>FREE ADMIN</strong>, our latest action-packed game where you can wield powerful admin commands and battle with hundreds of gears. Dive into an immersive open world and connect with players worldwide.</p>
-        <p>Explore the game, master the commands, and join our vibrant community today!</p>
-        <img src="https://placehold.co/768x432/png?text=FREE+ADMIN+Gameplay+Highlight+1" alt="Gameplay highlight showing admin powers in action" class="rounded-lg my-6" />
-        <p>Stay tuned for upcoming updates and new features.</p>
-      `
-    },
-  ];
+  const blogPosts = [];
 
   const navbarHTML = `
     <nav class="bg-gradient-to-r from-indigo-900 via-purple-900 to-indigo-900 shadow-md sticky top-0 z-50 border-b border-indigo-700">
@@ -769,3 +756,4 @@
     document.getElementById("main-content").addEventListener("click", handleGameLinkClick);
     initialLoad();
   });
+
