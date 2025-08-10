@@ -1,225 +1,124 @@
-body {
-      font-family: 'Roboto', sans-serif;
-      background-color: #1e293b;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-    .font-orbitron {
-      font-family: 'Orbitron', sans-serif;
-    }
-    /* Scrollbar for screenshots thumbnails */
-    .scrollbar-thin::-webkit-scrollbar {
-      height: 8px;
-    }
-    .scrollbar-thin::-webkit-scrollbar-track {
-      background: #1e293b;
-      border-radius: 9999px;
-    }
-    .scrollbar-thin::-webkit-scrollbar-thumb {
-      background-color: #7c3aed;
-      border-radius: 9999px;
-    }
-    /* FAQ transition */
-    .faq-answer.open {
-      transition: max-height 0.3s ease-in-out;
-    }
-    /* Buttons */
-    .play-btn {
-      background-color: #7c3aed;
-      color: #e0e7ff;
-      padding: 0.75rem 1.5rem;
-      border-radius: 9999px;
-      font-weight: 700;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      box-shadow: 0 0 10px #7c3aedaa;
-      transition: background-color 0.3s ease, box-shadow 0.3s ease;
-      user-select: none;
-      width: 100%;
-      justify-content: center;
-    }
-    .play-btn:hover,
-    .play-btn:focus {
-      background-color: #a78bfa;
-      box-shadow: 0 0 20px #a78bfaaa;
-      outline: none;
-    }
-    .btn-back {
-      background-color: transparent;
-      color: #a5b4fc;
-      font-weight: 600;
-      padding: 0.5rem 1rem;
-      border-radius: 0.5rem;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      border: 2px solid transparent;
-      transition: color 0.3s ease, border-color 0.3s ease;
-      user-select: none;
-      width: 100%;
-      justify-content: center;
-      margin-top: 0.75rem;
-    }
-    .btn-back:hover,
-    .btn-back:focus {
-      color: #7c3aed;
-      border-color: #7c3aed;
-      outline: none;
-    }
-    /* Coming Soon label */
-    .coming-soon-label {
-      position: absolute;
-      top: 1rem;
-      left: 1rem;
-      background: #a78bfa;
-      color: #1e293b;
-      font-weight: 700;
-      padding: 0.25rem 0.75rem;
-      border-radius: 9999px;
-      font-size: 0.875rem;
-      user-select: none;
-      box-shadow: 0 0 8px #a78bfaaa;
-      z-index: 10;
-    }
-    /* News date overlay */
-    .news-date-overlay {
-      position: absolute;
-      bottom: 0.5rem;
-      right: 0.5rem;
-      background: rgba(124, 58, 237, 0.85);
-      color: #e0e7ff;
-      font-size: 0.75rem;
-      font-weight: 600;
-      padding: 0.25rem 0.5rem;
-      border-radius: 0.375rem;
-      user-select: none;
-      box-shadow: 0 0 6px #7c3aedcc;
-    }
-    /* Home banner text shadow */
-    .text-shadow-lg {
-      text-shadow: 0 0 12px #a78bfa;
-    }
-    /* Focus ring override for better visibility */
-    a:focus, button:focus, input:focus, textarea:focus {
-      outline-offset: 2px;
-    }
-    /* Game details layout improvements */
-    .game-details-main {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-    }
-    @media (min-width: 768px) {
-      .game-details-main {
-        flex-direction: row;
-      }
-    }
-    /* Screenshot thumbnails container */
-    .thumbnails-container {
-      display: flex;
-      gap: 0.75rem;
-      overflow-x: auto;
-      padding-top: 0.5rem;
-      scrollbar-width: thin;
-      scrollbar-color: #7c3aed #1e293b;
-    }
-    .thumbnails-container::-webkit-scrollbar {
-      height: 8px;
-    }
-    .thumbnails-container::-webkit-scrollbar-track {
-      background: #1e293b;
-      border-radius: 9999px;
-    }
-    .thumbnails-container::-webkit-scrollbar-thumb {
-      background-color: #7c3aed;
-      border-radius: 9999px;
-    }
-    /* Thumbnail selected border */
-    .thumbnail-selected {
-      border-color: #a78bfa !important;
-      box-shadow: 0 0 8px #a78bfaaa;
-    }
-    /* Description rich text styling */
-    .game-description p {
-      margin-bottom: 1rem;
-    }
-    /* Specifications grid */
-    .specs-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit,minmax(140px,1fr));
-      gap: 1.5rem 3rem;
-      color: #c7d2fe;
-      font-weight: 600;
-    }
-    .specs-grid div span:first-child {
-      color: #a78bfa;
-      font-weight: 700;
-      user-select: text;
-    }
-    /* Newswire cards */
-    .news-post-image-container {
-      position: relative;
-      overflow: hidden;
-      border-radius: 1rem;
-      box-shadow: 0 0 15px #7c3aedaa;
-    }
-    /* FAQ icons rotation */
-    .faq-question[aria-expanded="true"] .icon i {
-      transform: rotate(180deg);
-      transition: transform 0.3s ease;
-    }
-    .faq-question[aria-expanded="false"] .icon i {
-      transform: rotate(0deg);
-      transition: transform 0.3s ease;
-    }
-    /* Contact form inputs */
-    input[type="text"], input[type="email"], textarea {
-      font-family: inherit;
-      font-size: 1rem;
-    }
-    /* Responsive iframe wrapper */
-    .iframe-wrapper {
-      width: 100%;
-      max-width: 360px;
-      border-radius: 1rem;
-      overflow: hidden;
-      box-shadow: 0 0 20px #7c3aedaa;
-    }
-    /* New styles for details page title area */
-    .details-header {
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-      margin-bottom: 1.5rem;
-    }
-    .details-header > h2 {
-      font-size: 3.25rem;
-      font-weight: 800;
-      color: #c4b5fd;
-      font-family: 'Orbitron', sans-serif;
-      user-select: text;
-      line-height: 1.1;
-    }
-    .details-meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.5rem 2.5rem;
-      color: #a78bfa;
-      font-weight: 600;
-      font-size: 1.125rem;
-      user-select: text;
-    }
-    .details-meta span {
-      display: flex;
-      flex-direction: column;
-      line-height: 1.2;
-    }
-    .details-meta span label {
-      font-size: 0.875rem;
-      color: #7c3aed;
-      font-weight: 700;
-      user-select: none;
-      margin-bottom: 0.15rem;
-    }
+.font-orbitron {
+  font-family: 'Orbitron', sans-serif;
+}
+.text-shadow-lg {
+  text-shadow: 0 2px 6px rgba(99, 102, 241, 0.7);
+}
+.play-btn {
+  background-color: #6366f1;
+  color: #f0f0f0;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  justify-content: center;
+}
+.play-btn:hover,
+.play-btn:focus {
+  background-color: #4f46e5;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.6);
+}
+.btn-back {
+  background-color: transparent;
+  color: #a5b4fc;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 2px solid transparent;
+  transition: border-color 0.3s ease, color 0.3s ease;
+  text-decoration: none;
+  justify-content: center;
+}
+.btn-back:hover,
+.btn-back:focus {
+  border-color: #818cf8;
+  color: #818cf8;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(129, 140, 248, 0.6);
+}
+.thumbnail-selected {
+  border-color: #818cf8 !important;
+}
+.specs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1.5rem;
+}
+.details-meta {
+  margin-top: 0.5rem;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+  color: #a5b4fc;
+}
+.details-meta label {
+  font-weight: 700;
+  display: block;
+  color: #c7d2fe;
+}
+.details-header h2 {
+  font-size: 2rem; /* smaller base size */
+  font-weight: 700;
+  color: #c7d2fe;
+}
+@media (min-width: 768px) {
+  .details-header h2 {
+    font-size: 3.25rem; /* original size on md+ */
+  }
+}
+.news-date-overlay {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  background-color: rgba(67, 56, 202, 0.8);
+  color: #e0e7ff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.375rem;
+  user-select: none;
+}
+.faq-answer.open {
+  max-height: 1000px !important;
+}
+.faq-question .icon {
+  transition: transform 0.3s ease;
+}
+.faq-question[aria-expanded="true"] .icon {
+  transform: rotate(180deg);
+}
+.home-game-card-content {
+  user-select: text;
+}
+.home-game-genre {
+  user-select: text;
+}
+.coming-soon-label {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  background-color: #7c3aed;
+  color: white;
+  font-weight: 700;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.375rem;
+  user-select: none;
+  z-index: 10;
+}
+/* Smaller text size for the specific h1 on mobile - more reduced */
+@media (max-width: 639px) {
+  h1.text-5xl.sm\:text-6xl {
+    font-size: 2rem; /* smaller than previous 2.5rem */
+    line-height: 1.1;
+  }
+}
