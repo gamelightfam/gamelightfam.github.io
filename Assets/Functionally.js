@@ -1,4 +1,4 @@
- const siteOnline = false;
+ const siteOnline = true;
 
   const gamesData = [
     {
@@ -13,19 +13,23 @@
       ],
       genre: "Action, Roleplay",
       subgenre: "Open World Action",
-      players: "Up to 25 players",
+      players: "Up to 10 players",
       developer: "GameLightFam Studios",
       releaseDate: "2025-5-21",
       placeId: "110271545001533",
       specifications: {
-        Genre: "Action, Roleplay",
-        Subgenre: "Battlegrounds & Fighting",
+        "Voice Chat": "Yes",
+        Camera: "No",
+        Created: "May 21, 2025",
+        Updated: "2 months ago",
         Players: "Up to 10 players",
-        Developer: "GameLightFam Studios",
-        "Release Date": "2025-5-21",
-        Platform: "PC, Mobile, Xbox"
+        Genre: "Action, Roleplay",
+        Subgenre: "Open World Action, Battlegrounds & Fighting",
+        "Avatar Type": "R15",
+        Maturity: "Crude humor (Mild), Violence (Repeated/Mild)",
+        Platform: "PC, Mobile"
       },
-      maturity: "Violence (Mild/Repeated), Crude humor (Mild)",
+      maturity: "Crude humor (Mild), Violence (Repeated/Mild)",
       isPublic: true
     },
 
@@ -54,10 +58,10 @@
         Genre: "Action, Roleplay",
         Subgenre: "Open World Action",
         "Avatar Type": "R6",
-        Maturity: "Mild Violence (Repeated/Mild)",
+        Maturity: "Violence (Repeated/Mild)",
         Platform: "PC, Mobile, Xbox"
       },
-      maturity: "Mild Violence (Repeated/Mild)",
+      maturity: "Violence (Repeated/Mild)",
       isPublic: true
     },
   ];
@@ -65,7 +69,20 @@
   const comingSoonGames = [];
 
   // Blog posts data for Newswire and Blog Post pages
-  const blogPosts = [];
+  const blogPosts = [
+    {
+      id: "post1",
+      title: "GameLightFam Launches FREE ADMIN - Experience Admin Powers!",
+      date: "2025-04-10",
+      image: "https://placehold.co/600x300/png?text=FREE+ADMIN+Launch+Announcement+with+neon+purple+and+blue+theme",
+      content: `
+        <p>We are thrilled to announce the launch of <strong>FREE ADMIN</strong>, our latest action-packed game where you can wield powerful admin commands and battle with hundreds of gears. Dive into an immersive open world and connect with players worldwide.</p>
+        <p>Explore the game, master the commands, and join our vibrant community today!</p>
+        <img src="https://placehold.co/768x432/png?text=FREE+ADMIN+Gameplay+Highlight+1" alt="Gameplay highlight showing admin powers in action" class="rounded-lg my-6" />
+        <p>Stay tuned for upcoming updates and new features.</p>
+      `
+    },
+  ];
 
   const navbarHTML = `
     <nav class="bg-gradient-to-r from-indigo-900 via-purple-900 to-indigo-900 shadow-md sticky top-0 z-50 border-b border-indigo-700">
@@ -196,24 +213,16 @@
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
     `;
     gamesData.forEach((game) => {
-      const desc = game.description && game.description.trim() !== "" ? game.description : "No description available";
       html += `
-        <article class="bg-indigo-800 rounded-xl shadow-xl overflow-hidden flex flex-col relative focus-within:ring-4 focus-within:ring-indigo-500 focus-within:outline-none transition-transform hover:scale-[1.03]" tabindex="0" aria-label="Game card for ${game.name}">
+        <article class="bg-indigo-0 rounded-xl shadow-x0 overflow-hidden flex flex-col relative focus-within:ring-4 focus-within:ring-indigo-500 focus-within:outline-none transition-transform hover:scale-[1.03]" tabindex="0" aria-label="Game card for ${game.name}">
           <a href="?page=details&game=${encodeURIComponent(
             game.name
           )}" data-page="details" class="block focus:outline-none focus:ring-0" tabindex="-1">
             <div class="game-image-container relative">
-              <img src="${game.image}" alt="Cover image of the game ${game.name} showing a thematic scene" loading="lazy" class="w-full h-52 sm:h-56 object-cover rounded-b-xl" />
+              <img src="${game.image}" alt="Cover image of the game ${game.name} showing a thematic scene" loading="lazy" class="w-full h-52 sm:h-56 object-contain rounded-b-x1">
             </div>
             <div class="p-6 flex-grow flex flex-col">
               <h3 class="text-2xl font-semibold mb-3 text-indigo-200">${game.name}</h3>
-              <p class="text-indigo-300 flex-grow break-words leading-relaxed">${
-                desc.length > 120
-                  ? desc.slice(0, 120) + "..."
-                  : desc
-              }</p>
-              <div class="mt-6 text-indigo-400 font-semibold tracking-wide">${game.genre}</div>
-            </div>
           </a>
         </article>
       `;
@@ -244,73 +253,73 @@
 
     return `
     <main id="main-content" class="flex-grow container mx-auto px-4 py-8 max-w-6xl">
-      <article class="bg-indigo-800 rounded-3xl shadow-2xl p-8 flex flex-col gap-12">
-        <div class="game-details-main">
-          <div class="md:w-1/2 relative flex-shrink-0 rounded-3xl overflow-hidden shadow-2xl">
-            <img id="main-screenshot" src="${game.screenshots[0]}" alt="Main screenshot of the game ${game.name} showing gameplay or environment" class="w-full object-cover max-h-[480px] rounded-3xl" />
-            <div class="thumbnails-container mt-4 px-1" role="list" aria-label="Game screenshots thumbnails">
-              ${game.screenshots.map((src, i) => `
-                <img src="${src}" alt="Screenshot ${i + 1} of the game ${game.name} showing gameplay or environment" class="w-28 h-20 object-cover rounded-lg cursor-pointer border-2 border-transparent hover:border-indigo-400 transition thumbnail" tabindex="0" data-index="${i}" role="listitem" />
-              `).join('')}
-            </div>
-          </div>
-          <div class="md:w-1/2 flex flex-col justify-between text-indigo-200">
-            <div class="details-header" tabindex="0" aria-label="Game title and key information">
-              <h2>${game.name}</h2>
-              <div class="details-meta">
-                <span>
-                  <label>Developer</label>
-                  <span>${game.developer}</span>
-                </span>
-                <span>
-                  <label>Maturity</label>
-                  <span>${game.maturity}</span>
-                </span>
-              </div>
-            </div>
-            <div class="btn-group flex flex-col gap-3 mt-4">
-              ${isPublic ? `
-                <a href="https://www.roblox.com/games/start?launchData=utm1%253A0%252C0%252Cweb-link%252Chome-bottom-play-button%252C%253B&placeId=${game.placeId}" target="_blank" rel="noopener noreferrer" class="play-btn" aria-label="Play ${game.name} on Roblox" tabindex="0">
-                  <i class="fas fa-play"></i> Play Now
-                </a>
-              ` : `
-                <span class="text-indigo-400 font-semibold italic select-none" aria-label="Game is private and cannot be played">This game is currently not available to play.</span>
-              `}
-              <a href="?page=games" data-page="games" class="btn-back" aria-label="Back to Games" tabindex="0" title="Back to Games">
-                <i class="fas fa-arrow-left"></i> Back
-              </a>
-            </div>
+    <article class="bg-indigo-800 rounded-3xl shadow-2xl p-8 flex flex-col gap-12">
+      <div class="game-details-main flex flex-col md:flex-row gap-8">
+        <div class="md:w-1/2 relative flex-shrink-0 rounded-3xl overflow-hidden shadow-2xl">
+          <img id="main-screenshot" src="${game.screenshots[0]}" alt="Main screenshot of the game ${game.name} showing gameplay or environment" class="w-full object-cover max-h-[480px] rounded-3xl">
+          <div class="thumbnails-container mt-4 px-1 flex gap-4 overflow-x-auto" role="list" aria-label="Game screenshots thumbnails">
+            ${game.screenshots.map((src, i) => `
+              <img src="${src}" alt="Screenshot ${i + 1} of the game ${game.name} showing gameplay or environment" class="w-28 h-20 object-cover rounded-lg cursor-pointer border-2 border-transparent hover:border-indigo-400 transition thumbnail flex-shrink-0" tabindex="0" data-index="${i}" role="listitem" />
+            `).join('')}
           </div>
         </div>
-        <section class="game-description text-indigo-200 prose max-w-full" aria-label="Game description" tabindex="0">
-          <h3 class="text-3xl font-bold mb-6 text-indigo-300 select-none">Description</h3>
-          ${desc}
-        </section>
-        <section class="specifications-section text-indigo-200 max-w-full" aria-label="Game specifications" tabindex="0">
-          <h3 class="text-3xl font-bold mb-6 text-indigo-300 select-none">Specifications</h3>
-          <div class="specs-grid">
-            ${specsHTML}
+        <div class="md:w-1/2 flex flex-col justify-between text-indigo-200">
+          <div class="details-header" tabindex="0" aria-label="Game title and key information">
+            <h2 class="text-4xl font-bold mb-2" style="">${game.name}</h2>
+            <div class="details-meta">
+              <span>
+                <label>Developer</label>
+                <span>${game.developer}</span>
+              </span>
+              <span>
+                <label>Maturity</label>
+                <span>${game.maturity}</span>
+              </span>
+            </div>
           </div>
-        </section>
-      </article>
-    </main>
-    `;
-  }
+          <div class="btn-group flex flex-col gap-3 mt-4">
+            ${isPublic ? `
+              <a href="https://www.roblox.com/games/start?launchData=utm1%253A0%252C0%252Cweb-link%252Chome-bottom-play-button%252C%253B&placeId=${game.placeId}" target="_blank" rel="noopener noreferrer" class="play-btn" aria-label="Play ${game.name} on Roblox" tabindex="0">
+                <i class="fas fa-play"></i> Play Now
+              </a>
+            ` : `
+              <span class="text-indigo-400 font-semibold italic select-none" aria-label="Game is private and cannot be played">This game is currently not available to play.</span>
+            `}
+            <a href="?page=games" data-page="games" class="btn-back" aria-label="Back to Games" tabindex="0" title="Back to Games">
+              <i class="fas fa-arrow-left"></i> Back
+            </a>
+          </div>
+        </div>
+      </div>
+      <section class="game-description text-indigo-200 prose max-w-full" aria-label="Game description" tabindex="0">
+        <h3 class="text-3xl font-bold mb-6 text-indigo-300 select-none">Description</h3>
+        ${desc}
+      </section>
+      <section class="specifications-section text-indigo-200 max-w-full" aria-label="Game specifications" tabindex="0">
+        <h3 class="text-3xl font-bold mb-6 text-indigo-300 select-none">Specifications</h3>
+        <div class="specs-grid">
+          ${specsHTML}
+        </div>
+      </section>
+    </article>
+  </main>
+  `;
+}
 
   function renderNewswire() {
     let postsHTML = "";
     blogPosts.forEach(post => {
       const publishedDate = new Date(post.date).toLocaleDateString(undefined, { year: "numeric", month: "long", day: "numeric" });
       postsHTML += `
-        <article tabindex="0" class="post bg-indigo-800 rounded-2xl shadow-2xl p-6 flex flex-col text-center text-indigo-200 focus:outline-none focus:ring-4 focus:ring-indigo-500 transition-transform hover:scale-[1.03]">
+      <a href="?page=blogpost&id=${post.id}" data-page="blogpost" data-id="${post.id}"> 
+      <article tabindex="0" class="post bg-indigo-800 rounded-2xl shadow-2xl p-6 flex flex-col text-center text-indigo-200 focus:outline-none focus:ring-4 focus:ring-indigo-500 transition-transform hover:scale-[1.03]">
           <div class="news-post-image-container mb-6 rounded-2xl overflow-hidden relative">
             <img src="${post.image}" alt="News post titled '${post.title}' image" loading="lazy" class="rounded-2xl w-full h-48 object-cover" />
             <div class="news-date-overlay" aria-label="Published date">${publishedDate}</div>
           </div>
           <h3 class="font-semibold text-2xl mb-3">${post.title}</h3>
-          <p class="flex-grow mb-6 break-words leading-relaxed">${post.content.replace(/<[^>]+>/g, '').slice(0, 150)}...</p>
-          <a href="?page=blogpost&id=${post.id}" data-page="blogpost" data-id="${post.id}" class="read-more text-indigo-300 font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-indigo-400 rounded" tabindex="0">Read More</a>
         </article>
+        </a>
       `;
     });
 
@@ -336,11 +345,6 @@
         <div class="text-indigo-400 italic mb-6 select-none">Published on ${publishedDate}</div>
         <img src="${post.image}" alt="Featured image for blog post titled '${post.title}'" class="rounded-2xl mb-8 w-full object-cover max-h-96" />
         <section class="blog-post-content">${post.content}</section>
-        <div class="mt-10">
-          <a href="?page=newswire" data-page="newswire" class="btn-back inline-flex items-center gap-2" tabindex="0" aria-label="Back to Newswire">
-            <i class="fas fa-arrow-left"></i> Back to Newswire
-          </a>
-        </div>
       </article>
     </main>
     `;
@@ -488,32 +492,32 @@
 
     return `
     <section class="full-width-banner max-w-full bg-gradient-to-r from-indigo-900 via-purple-900 to-indigo-900 text-center text-indigo-100 p-16 rounded-3xl shadow-2xl font-orbitron mx-6 sm:mx-auto max-w-7xl select-none" role="banner" aria-label="Main promotional banner">
-      <div>
-        <h1 class="text-5xl sm:text-6xl font-extrabold mb-6 leading-tight text-shadow-lg">Unleashing the Potential of Metaverse Gaming</h1>
-        <p class="text-xl max-w-4xl mx-auto mb-12 font-medium">Committed to creating breakthrough experiences and original content, GameLightFam strives to achieve entertainment excellence and redefine the future of gaming.</p>
-        <a href="?page=games" data-page="games" class="cta-btn inline-block px-8 py-4 rounded-3xl font-extrabold text-indigo-900 hover:bg-indigo-300 focus:outline-none focus:ring-4 focus:ring-indigo-400" tabindex="0" aria-label="Explore all games">
-          Explore Our Games
-        </a>
-      </div>
-    </section>
-    <section class="whats-up-container max-w-7xl mx-auto bg-indigo-800 rounded-3xl shadow-2xl p-8 mt-16 flex flex-col md:flex-row gap-10 text-indigo-200" aria-label="What's Up With Us Facebook feed and description">
-      <div class="whats-up-text flex-1 text-lg leading-relaxed select-text">
-        <h2 class="text-4xl font-extrabold mb-6 text-indigo-400 font-orbitron select-none">What's Up With Us?</h2>
-        <p>Stay connected with GameLightFam Studios through our Facebook page. Get the latest updates, community events, and behind-the-scenes content. Join the conversation and be part of our growing community!</p>
-      </div>
-      <div class="iframe-wrapper flex-1 flex justify-center">
-        <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fgamelightfam&tabs=timeline&width=360&height=520&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="360" height="520" style="border:none;overflow:hidden;border-radius:1rem;" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" title="GameLightFam Facebook Timeline"></iframe>
-      </div>
-    </section>
-    <h2 class="home-section-title text-center text-indigo-400 font-orbitron mt-20 mb-12 text-4xl select-none">Featured Games</h2>
-    <section class="home-games-grid max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 px-6">
-      ${featuredGamesHTML}
-    </section>
-    <h2 class="home-section-title text-center text-indigo-400 font-orbitron mt-20 mb-12 text-4xl select-none">Coming Soon</h2>
-    <section class="home-games-grid max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 px-6">
-      ${comingSoonHTML}
-    </section>
-    `;
+    <div>
+      <h1 class="text-4xl sm:text-6xl font-extrabold mb-6 leading-tight text-shadow-lg" style="">Unleashing the Potential of Metaverse Gaming</h1>
+      <p class="text-xl max-w-4xl mx-auto mb-12 font-medium">Committed to creating breakthrough experiences and original content, GameLightFam strives to achieve entertainment excellence and redefine the future of gaming.</p>
+      <a href="?page=games" data-page="games"class="bg-indigo-0 rounded-xl shadow-x0 class="cta-btn inline-block px-8 py-4 rounded-3xl font-extrabold text-indigo-900 hover:bg-indigo-300 focus:outline-none focus:ring-4 focus:ring-indigo-400" tabindex="0" aria-label="Explore all games">
+        Explore Our Games
+      </a>
+    </div>
+  </section>
+  <section class="whats-up-container max-w-7xl mx-auto bg-indigo-800 rounded-3xl shadow-2xl p-8 mt-16 flex flex-col md:flex-row gap-10 text-indigo-200" aria-label="What's Up With Us Facebook feed and description">
+    <div class="whats-up-text flex-1 text-lg leading-relaxed select-text">
+      <h2 class="text-4xl font-extrabold mb-6 text-indigo-400 font-orbitron select-none">What's Up With Us?</h2>
+      <p>Stay connected with GameLightFam Studios through our Facebook page. Get the latest updates, community events, and behind-the-scenes content. Join the conversation and be part of our growing community!</p>
+    </div>
+    <div class="iframe-wrapper flex-1 flex justify-center">
+      <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fgamelightfam&tabs=timeline&width=360&height=520&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="360" height="520" style="border:none;overflow:hidden;border-radius:1rem;" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" title="GameLightFam Facebook Timeline"></iframe>
+    </div>
+  </section>
+  <h2 class="home-section-title text-center text-indigo-400 font-orbitron mt-20 mb-12 text-4xl select-none">Featured Games</h2>
+  <section class="home-games-grid max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 px-6">
+    ${featuredGamesHTML}
+  </section>
+  <h2 class="home-section-title text-center text-indigo-400 font-orbitron mt-20 mb-12 text-4xl select-none">Coming Soon</h2>
+  <section class="home-games-grid max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 px-6">
+    ${comingSoonHTML}
+  </section>
+  `;
   }
 
   const pages = {
@@ -765,4 +769,3 @@
     document.getElementById("main-content").addEventListener("click", handleGameLinkClick);
     initialLoad();
   });
-
