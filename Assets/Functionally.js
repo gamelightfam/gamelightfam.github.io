@@ -59,7 +59,7 @@
         Subgenre: "Open World Action",
         "Avatar Type": "R6",
         Maturity: "Violence (Repeated/Mild)",
-        Platform: "PC, Mobile, Xbox"
+        Platform: "PC, Mobile"
       },
       maturity: "Violence (Repeated/Mild)",
       isPublic: true
@@ -756,4 +756,5 @@
     document.getElementById("main-content").addEventListener("click", handleGameLinkClick);
     initialLoad();
   });
+
 
