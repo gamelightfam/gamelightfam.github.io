@@ -2,38 +2,6 @@
 
   const gamesData = [
     {
-      name: "FREE ADMIN",
-      image:
-        "https://tr.rbxcdn.com/180DAY-b0c3cfa83c9b22a66f99ab2c86b255c3/150/150/Image/Webp/noFilter",
-      description:
-        "Welcome to Free Admin! You have cool Admin Powers, which allow you to do awesome Admin Commands.<br><br>❓The Prefix is ;<br>💬 Type ;cmds to view all Admin Commands!<br><br>🔨 FREE ADMIN 💥 allows you to:<br>⭐ Play with Admin Commands!<br>🗡️💣🔫 Fight with Hundreds of Free Powerful Gears!<br>😎💬 Chat and Play with Others!",
-      screenshots: [
-        "https://tr.rbxcdn.com/180DAY-c584bc3a17518be78f0d874cbae00f77/768/432/Image/Webp/noFilter",
-        "https://tr.rbxcdn.com/180DAY-dab6a3eb758071f5904839f6232576c1/768/432/Image/Webp/noFilter",
-      ],
-      genre: "Action, Roleplay",
-      subgenre: "Open World Action",
-      players: "Up to 10 players",
-      developer: "GameLightFam Studios",
-      releaseDate: "2025-5-21",
-      placeId: "110271545001533",
-      specifications: {
-        "Voice Chat": "Yes",
-        Camera: "No",
-        Created: "May 21, 2025",
-        Updated: "2 months ago",
-        Players: "Up to 10 players",
-        Genre: "Action, Roleplay",
-        Subgenre: "Open World Action, Battlegrounds & Fighting",
-        "Avatar Type": "R15",
-        Maturity: "Crude humor (Mild), Violence (Repeated/Mild)",
-        Platform: "PC, Mobile"
-      },
-      maturity: "Crude humor (Mild), Violence (Repeated/Mild)",
-      isPublic: true
-    },
-
-    {
       name: "PrisonBreak Life",
       image:
         "https://tr.rbxcdn.com/180DAY-dfe1e03f05f528587fb01894242b8aaa/150/150/Image/Webp/noFilter",
@@ -756,5 +724,6 @@
     document.getElementById("main-content").addEventListener("click", handleGameLinkClick);
     initialLoad();
   });
+
 
 
