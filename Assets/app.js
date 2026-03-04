@@ -1,77 +1,75 @@
- const siteOnline = true;
-
-  const gamesData = [
-    {
-      name: "FREE ADMIN",
-      image:
-        "https://tr.rbxcdn.com/180DAY-b0c3cfa83c9b22a66f99ab2c86b255c3/150/150/Image/Webp/noFilter",
-      description:
-        "Welcome to Free Admin! You have cool Admin Powers, which allow you to do awesome Admin Commands.<br><br>❓The Prefix is ;<br>💬 Type ;cmds to view all Admin Commands!<br><br>🔨 FREE ADMIN 💥 allows you to:<br>⭐ Play with Admin Commands!<br>🗡️💣🔫 Fight with Hundreds of Free Powerful Gears!<br>😎💬 Chat and Play with Others!",
-      screenshots: [
-        "https://tr.rbxcdn.com/180DAY-c584bc3a17518be78f0d874cbae00f77/768/432/Image/Webp/noFilter",
-        "https://tr.rbxcdn.com/180DAY-dab6a3eb758071f5904839f6232576c1/768/432/Image/Webp/noFilter",
-      ],
-      genre: "Action, Roleplay",
-      subgenre: "Open World Action",
-      players: "Up to 10 players",
-      developer: "GameLightFam Studios",
-      releaseDate: "2025-5-21",
-      placeId: "110271545001533",
-      specifications: {
-        "Voice Chat": "Yes",
-        Camera: "No",
-        Created: "May 21, 2025",
-        Updated: "2 months ago",
-        Players: "Up to 10 players",
-        Genre: "Action, Roleplay",
-        Subgenre: "Open World Action, Battlegrounds & Fighting",
-        "Avatar Type": "R15",
-        Maturity: "Crude humor (Mild), Violence (Repeated/Mild)",
-        Platform: "PC, Mobile"
-      },
-      maturity: "Crude humor (Mild), Violence (Repeated/Mild)",
-      isPublic: true
+const siteOnline = true;
+const gamesData = [
+  {
+    name: "FREE ADMIN",
+    image:
+      "https://tr.rbxcdn.com/180DAY-b0c3cfa83c9b22a66f99ab2c86b255c2/150/150/Image/Webp/noFilter",
+    description:
+      "Welcome to Free Admin! You have cool Admin Powers, which allow you to do awesome Admin Commands.<br><br>❓The Prefix is ;<br>💬 Type ;cmds to view all Admin Commands!<br><br>🔨 FREE ADMIN 💥 allows you to:<br>⭐ Play with Admin Commands!<br>🗡️💣🔫 Fight with Hundreds of Free Powerful Gears!<br>😎💬 Chat and Play with Others!",
+    screenshots: [
+      "https://tr.rbxcdn.com/180DAY-c584bc3a17518be78f0d874cbae00f77/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-dab6a3eb758071f5904839f6232576c1/768/432/Image/Webp/noFilter",
+    ],
+    genre: "Action, Roleplay",
+    subgenre: "Open World Action",
+    players: "Up to 10 players",
+    developer: "GameLightFam Studios",
+    releaseDate: "2025-5-21",
+    placeId: "110271545001533",
+    specifications: {
+      "Voice Chat": "Yes",
+      Camera: "No",
+      Created: "May 21, 2025",
+      Updated: "2 months ago",
+      Players: "Up to 10 players",
+      Genre: "Action, Roleplay",
+      Subgenre: "Open World Action, Battlegrounds & Fighting",
+      "Avatar Type": "R15",
+      Maturity: "Crude humor (Mild), Violence (Repeated/Mild)",
+      Platform: "PC, Mobile"
     },
-
-    {
-      name: "PrisonBreak Life",
-      image:
-        "https://tr.rbxcdn.com/180DAY-dfe1e03f05f528587fb01894242b8aaa/150/150/Image/Webp/noFilter",
-      description:
-        "Live life as a prisoner and escape, or become a guard and defend the prison!<br><br>PrisonBreak Life is a prison game where you can orchestrate catch criminals! Team up with friends for even more fun and plan the ultimate police raid or criminal. What role will you play?",
-      screenshots: [
-        "https://tr.rbxcdn.com/180DAY-f2313fc38eb1ac6e4eaba70238fda964/768/432/Image/Webp/noFilter",
-        "https://tr.rbxcdn.com/180DAY-c2ab1668772b21ff2367965ff0698426/768/432/Image/Webp/noFilter",
-      ],
-      genre: "Action, Roleplay",
-      subgenre: "Open World Action",
-      players: "Up to 24 players",
-      developer: "GameLightFam Studios",
-      releaseDate: "2025-7-5",
-      placeId: "102996244873668",
-      specifications: {
-        "Voice Chat": "No",
-        Camera: "No",
-        Created: "July 5, 2025",
-        Updated: "3 weeks ago",
-        Players: "Up to 24 players",
-        Genre: "Action, Roleplay",
-        Subgenre: "Open World Action",
-        "Avatar Type": "R6",
-        Maturity: "Violence (Repeated/Mild)",
-        Platform: "PC, Mobile, Xbox"
-      },
-      maturity: "Violence (Repeated/Mild)",
-      isPublic: true
+    maturity: "Crude humor (Mild), Violence (Repeated/Mild)",
+    isPublic: true
+  },
+  {
+    name: "PrisonBreak Life",
+    image:
+      "https://tr.rbxcdn.com/180DAY-dfe1e03f05f528587fb01894242b8aaa/150/150/Image/Webp/noFilter",
+    description:
+      "Live life as a prisoner and escape, or become a guard and defend the prison!<br><br>PrisonBreak Life is a prison game where you can orchestrate catch criminals! Team up with friends for even more fun and plan the ultimate police raid or criminal. What role will you play?",
+    screenshots: [
+      "https://tr.rbxcdn.com/180DAY-f2313fc38eb1ac6e4eaba70238fda964/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-c2ab1668772b21ff2367965ff0698426/768/432/Image/Webp/noFilter",
+    ],
+    genre: "Action, Roleplay",
+    subgenre: "Open World Action",
+    players: "Up to 24 players",
+    developer: "GameLightFam Studios",
+    releaseDate: "2025-7-5",
+    placeId: "102996244873668",
+    specifications: {
+      "Voice Chat": "No",
+      Camera: "No",
+      Created: "July 5, 2025",
+      Updated: "3 weeks ago",
+      Players: "Up to 24 players",
+      Genre: "Action, Roleplay",
+      Subgenre: "Open World Action",
+      "Avatar Type": "R6",
+      Maturity: "Violence (Repeated/Mild)",
+      Platform: "PC, Mobile, Xbox"
     },
-  ];
+    maturity: "Violence (Repeated/Mild)",
+    isPublic: true
+  },
+];
 
-  const comingSoonGames = [];
+const comingSoonGames = [];
 
-  // Blog posts data for Newswire and Blog Post pages
-  const blogPosts = [];
+// NEW: Global variable to store blog posts
+let blogPosts = [];
 
-  const navbarHTML = `
+const navbarHTML = `
     <nav class="bg-gradient-to-r from-indigo-900 via-purple-900 to-indigo-900 shadow-md sticky top-0 z-50 border-b border-indigo-700">
       <div class="container mx-auto flex items-center justify-between px-4 py-3 md:py-4">
         <a class="flex items-center" href="?page=home" data-page="home" aria-label="GameLightFam Home">
@@ -96,7 +94,7 @@
     </nav>
   `;
 
-  const footerHTML = `
+const footerHTML = `
     <footer class="bg-indigo-900 text-indigo-200 mt-auto border-t border-indigo-700">
       <div class="container mx-auto px-6 py-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
         <div>
@@ -145,8 +143,8 @@
     </footer>
   `;
 
-  function renderPrivacy() {
-    return `
+function renderPrivacy() {
+  return `
     <main id="main-content" class="flex-grow container mx-auto px-4 py-8 max-w-5xl prose prose-indigo">
       <section class="terms-content">
         <h1 class="font-orbitron text-indigo-400">Privacy Policy</h1>
@@ -191,16 +189,16 @@
       </section>
     </main>
     `;
-  }
+}
 
-  function renderGames() {
-    let html = `
+function renderGames() {
+  let html = `
     <main id="main-content" class="flex-grow container mx-auto px-4 py-8 max-w-7xl">
       <h2 class="text-4xl font-extrabold mb-10 text-indigo-400 font-orbitron select-none">Our Games</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
     `;
-    gamesData.forEach((game) => {
-      html += `
+  gamesData.forEach((game) => {
+    html += `
         <article class="bg-indigo-0 rounded-xl shadow-x0 overflow-hidden flex flex-col relative focus-within:ring-4 focus-within:ring-indigo-500 focus-within:outline-none transition-transform hover:scale-[1.03]" tabindex="0" aria-label="Game card for ${game.name}">
           <a href="?page=details&game=${encodeURIComponent(
             game.name
@@ -213,32 +211,32 @@
           </a>
         </article>
       `;
-    });
-    html += `</div></main>`;
-    return html;
+  });
+  html += `</div></main>`;
+  return html;
+}
+
+function renderGameDetails(game) {
+  if (!game) {
+    return `<main id="main-content" class="flex-grow container mx-auto px-4 py-8 max-w-5xl text-center text-indigo-300 font-orbitron select-none"><p>Game not found.</p></main>`;
   }
 
-  function renderGameDetails(game) {
-    if (!game) {
-      return `<main id="main-content" class="flex-grow container mx-auto px-4 py-8 max-w-5xl text-center text-indigo-300 font-orbitron select-none"><p>Game not found.</p></main>`;
-    }
-
-    let specsHTML = Object.entries(game.specifications)
-      .filter(([key]) => key !== "Developer")
-      .map(
-        ([key, val]) =>
-          `<div class="flex flex-col">
+  let specsHTML = Object.entries(game.specifications)
+   .filter(([key]) => key!== "Developer")
+   .map(
+      ([key, val]) =>
+        `<div class="flex flex-col">
             <span class="font-semibold text-indigo-300">${key}</span>
             <span>${val}</span>
           </div>`
-      )
-      .join("");
+    )
+   .join("");
 
-    const desc = game.description && game.description.trim() !== "" ? game.description : "No description available";
+  const desc = game.description && game.description.trim()!== ""? game.description : "No description available";
 
-    const isPublic = game.isPublic === true;
+  const isPublic = game.isPublic === true;
 
-    return `
+  return `
     <main id="main-content" class="flex-grow container mx-auto px-4 py-8 max-w-6xl">
     <article class="bg-indigo-800 rounded-3xl shadow-2xl p-8 flex flex-col gap-12">
       <div class="game-details-main flex flex-col md:flex-row gap-8">
@@ -265,7 +263,7 @@
             </div>
           </div>
           <div class="btn-group flex flex-col gap-3 mt-4">
-            ${isPublic ? `
+            ${isPublic? `
               <a href="https://www.roblox.com/games/start?launchData=utm1%253A0%252C0%252Cweb-link%252Chome-bottom-play-button%252C%253B&placeId=${game.placeId}" target="_blank" rel="noopener noreferrer" class="play-btn" aria-label="Play ${game.name} on Roblox" tabindex="0">
                 <i class="fas fa-play"></i> Play Now
               </a>
@@ -293,24 +291,31 @@
   `;
 }
 
-  function renderNewswire() {
-    let postsHTML = "";
-    blogPosts.forEach(post => {
+// MODIFIED: renderNewswire now accepts blogPosts as an argument
+function renderNewswire(posts = []) {
+  let postsHTML = "";
+  if (posts.length === 0) {
+    postsHTML = `<p class="text-center text-indigo-300 col-span-full select-none">No news posts available at the moment.</p>`;
+  } else {
+    posts.forEach(post => {
+      // Ensure post.id is a string for the URL
+      const postId = typeof post.id === 'number'? post.id.toString() : post.id;
       const publishedDate = new Date(post.date).toLocaleDateString(undefined, { year: "numeric", month: "long", day: "numeric" });
       postsHTML += `
-      <a href="?page=blogpost&id=${post.id}" data-page="blogpost" data-id="${post.id}"> 
-      <article tabindex="0" class="post bg-indigo-800 rounded-2xl shadow-2xl p-6 flex flex-col text-center text-indigo-200 focus:outline-none focus:ring-4 focus:ring-indigo-500 transition-transform hover:scale-[1.03]">
-          <div class="news-post-image-container mb-6 rounded-2xl overflow-hidden relative">
-            <img src="${post.image}" alt="News post titled '${post.title}' image" loading="lazy" class="rounded-2xl w-full h-48 object-cover" />
-            <div class="news-date-overlay" aria-label="Published date">${publishedDate}</div>
-          </div>
-          <h3 class="font-semibold text-2xl mb-3">${post.title}</h3>
-        </article>
+        <a href="?page=blogpost&id=${postId}" data-page="blogpost" data-id="${postId}">
+          <article tabindex="0" class="post bg-indigo-800 rounded-2xl shadow-2xl p-6 flex flex-col text-center text-indigo-200 focus:outline-none focus:ring-4 focus:ring-indigo-500 transition-transform hover:scale-[1.03]">
+            <div class="news-post-image-container mb-6 rounded-2xl overflow-hidden relative">
+              <img src="${post.image}" alt="News post titled '${post.title}' image" loading="lazy" class="rounded-2xl w-full h-48 object-cover" />
+              <div class="news-date-overlay" aria-label="Published date">${publishedDate}</div>
+            </div>
+            <h3 class="font-semibold text-2xl mb-3">${post.title}</h3>
+          </article>
         </a>
       `;
     });
+  }
 
-    return `
+  return `
     <main id="main-content" class="flex-grow container mx-auto px-4 py-8 max-w-7xl text-indigo-200 font-orbitron">
       <h2 class="text-4xl font-extrabold mb-10 text-left text-indigo-400 select-none">Latest News & Updates</h2>
       <div id="news-container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-full mx-auto">
@@ -318,14 +323,16 @@
       </div>
     </main>
     `;
-  }
+}
 
-  function renderBlogPost(post) {
-    if (!post) {
-      return `<main id="main-content" class="flex-grow container mx-auto px-4 py-8 max-w-5xl text-center text-indigo-300 font-orbitron select-none"><p>Blog post not found.</p></main>`;
-    }
-    const publishedDate = new Date(post.date).toLocaleDateString(undefined, { year: "numeric", month: "long", day: "numeric" });
-    return `
+// MODIFIED: renderBlogPost now finds the post from the global blogPosts array
+function renderBlogPost(postId) {
+  const post = blogPosts.find(p => p.id == postId); // Use == for loose comparison if ID type might vary
+  if (!post) {
+    return `<main id="main-content" class="flex-grow container mx-auto px-4 py-8 max-w-5xl text-center text-indigo-300 font-orbitron select-none"><p>Blog post not found.</p></main>`;
+  }
+  const publishedDate = new Date(post.date).toLocaleDateString(undefined, { year: "numeric", month: "long", day: "numeric" });
+  return `
     <main id="main-content" class="flex-grow container mx-auto px-4 py-8 max-w-5xl prose prose-indigo">
       <article class="bg-indigo-800 rounded-2xl shadow-2xl p-8">
         <h1 class="font-orbitron text-indigo-400 mb-4">${post.title}</h1>
@@ -335,10 +342,10 @@
       </article>
     </main>
     `;
-  }
+}
 
-  function renderFAQ() {
-    return `
+function renderFAQ() {
+  return `
     <main id="main-content" class="flex-grow container mx-auto px-4 py-8 max-w-3xl prose prose-indigo">
       <h2 class="text-4xl font-extrabold mb-10 text-center text-indigo-400 font-orbitron select-none">Frequently Asked Questions</h2>
       <section class="space-y-6">
@@ -372,10 +379,10 @@
       </section>
     </main>
     `;
-  }
+}
 
-  function renderTerms() {
-    return `
+function renderTerms() {
+  return `
     <main id="main-content" class="flex-grow container mx-auto px-4 py-8 max-w-5xl prose prose-indigo">
       <section class="terms-container">
         <h1 class="font-orbitron text-indigo-400">Terms of Use</h1>
@@ -395,10 +402,10 @@
       </section>
     </main>
     `;
-  }
+}
 
-  function renderContact() {
-    return `
+function renderContact() {
+  return `
     <main id="main-content" class="flex-grow container mx-auto px-4 py-8 max-w-lg prose prose-indigo">
       <section class="contact-form" aria-label="Contact form">
         <h1 class="text-4xl font-extrabold mb-8 text-indigo-400 font-orbitron text-center select-none">Contact Us</h1>
@@ -417,10 +424,10 @@
       </section>
     </main>
     `;
-  }
+}
 
-  function renderAbout() {
-    return `
+function renderAbout() {
+  return `
     <main id="main-content" class="flex-grow container mx-auto px-4 py-8 max-w-5xl prose prose-indigo">
       <section class="about-container prose max-w-full">
         <h1 class="font-orbitron select-none text-indigo-400">About GameLightFam</h1>
@@ -430,54 +437,54 @@
       </section>
     </main>
     `;
-  }
+}
 
-  function renderHome() {
-    const featuredGames = gamesData.slice(0, 3);
-    let featuredGamesHTML = "";
-    featuredGames.forEach((game) => {
-      const desc = game.description && game.description.trim() !== "" ? game.description : "No description available";
-      featuredGamesHTML += `
+function renderHome() {
+  const featuredGames = gamesData.slice(0, 3);
+  let featuredGamesHTML = "";
+  featuredGames.forEach((game) => {
+    const desc = game.description && game.description.trim()!== ""? game.description : "No description available";
+    featuredGamesHTML += `
         <article class="home-game-card bg-indigo-800 rounded-2xl shadow-2xl overflow-hidden flex flex-col relative focus-within:ring-4 focus-within:ring-indigo-500 focus-within:outline-none transition-transform hover:scale-[1.04]" tabindex="0" aria-label="Featured game ${game.name}">
           <img src="${game.image}" alt="Cover image of the game ${game.name} showing a thematic scene" loading="lazy" class="w-full h-48 sm:h-56 object-cover rounded-t-2xl" />
           <div class="home-game-card-content p-6 flex flex-col flex-grow">
             <h3 class="text-2xl font-semibold mb-3 text-indigo-200 select-text">${game.name}</h3>
             <p class="flex-grow text-indigo-300 break-words leading-relaxed">${
               desc.length > 120
-                ? desc.slice(0, 120) + "..."
+               ? desc.slice(0, 120) + "..."
                 : desc
             }</p>
             <div class="home-game-genre mt-4 font-semibold text-indigo-400 select-text tracking-wide">${game.genre}</div>
           </div>
         </article>
       `;
-    });
+  });
 
-    let comingSoonHTML = "";
-    if (comingSoonGames.length === 0) {
-      comingSoonHTML = `<p class="text-center text-indigo-300 col-span-full mt-6 mb-6 font-orbitron text-lg select-none">There's nothing here just yet, stay tuned.</p>`;
-    } else {
-      comingSoonGames.forEach((game) => {
-        const desc = game.description && game.description.trim() !== "" ? game.description : "No description available";
-        comingSoonHTML += `
-          <article class="home-game-card bg-indigo-800 rounded-2xl shadow-2xl overflow-hidden flex flex-col relative focus-within:ring-4 focus-within:ring-indigo-500 focus-within:outline-none transition-transform hover:scale-[1.04]" tabindex="0" aria-label="Coming soon game ${game.name}">
+  let comingSoonHTML = "";
+  if (comingSoonGames.length === 0) {
+    comingSoonHTML = `<p class="text-center text-indigo-300 col-span-full mt-6 mb-6 font-orbitron text-lg select-none">There's nothing here just yet, stay tuned.</p>`;
+  } else {
+    comingSoonGames.forEach((game) => {
+      const desc = game.description && game.description.trim()!== ""? game.description : "No description available";
+      comingSoonHTML += `
+          <article class="home-game-card bg-indigo-800 rounded-2xl shadow-2xl overflow-hidden flex flex-col relative focus-within:ring-4 focus:ring-indigo-500 focus-within:outline-none transition-transform hover:scale-[1.04]" tabindex="0" aria-label="Coming soon game ${game.name}">
             <img src="${game.image}" alt="Coming soon cover image for the game ${game.name} showing thematic artwork" loading="lazy" class="w-full h-48 sm:h-56 object-cover rounded-t-2xl" />
             <div class="coming-soon-label" aria-label="Coming soon label">Coming Soon</div>
             <div class="home-game-card-content p-6 flex flex-col flex-grow">
               <h3 class="text-2xl font-semibold mb-3 text-indigo-200 select-text">${game.name}</h3>
               <p class="flex-grow text-indigo-300 break-words leading-relaxed">${
                 desc.length > 120
-                  ? desc.slice(0, 120) + "..."
+                 ? desc.slice(0, 120) + "..."
                   : desc
               }</p>
               <div class="home-game-genre mt-4 font-semibold text-indigo-400 select-text tracking-wide">${game.genre}</div>
             </div>
           </article>
         `;
-      });
-    }
+    });
+  }
 
-    return `
+  return `
     <section class="full-width-banner max-w-full bg-gradient-to-r from-indigo-900 via-purple-900 to-indigo-900 text-center text-indigo-100 p-16 rounded-3xl shadow-2xl font-orbitron mx-6 sm:mx-auto max-w-7xl select-none" role="banner" aria-label="Main promotional banner">
     <div>
       <h1 class="text-4xl sm:text-6xl font-extrabold mb-6 leading-tight text-shadow-lg" style="">Unleashing the Potential of Metaverse Gaming</h1>
@@ -505,96 +512,105 @@
     ${comingSoonHTML}
   </section>
   `;
-  }
+}
 
-  const pages = {
-    home: renderHome(),
-    games: renderGames(),
-    newswire: renderNewswire(),
-    faq: renderFAQ(),
-    terms: renderTerms(),
-    privacy: renderPrivacy(),
-    contact: renderContact(),
-    about: renderAbout(),
-  };
+// NOTE: `pages` object now refers to functions that will be called dynamically
+// The `newswire` entry is removed as it's handled by `loadPage` dynamically
+const pages = {
+  home: renderHome, // Changed to function reference
+  games: renderGames, // Changed to function reference
+  faq: renderFAQ, // Changed to function reference
+  terms: renderTerms, // Changed to function reference
+  privacy: renderPrivacy, // Changed to function reference
+  contact: renderContact, // Changed to function reference
+  about: renderAbout, // Changed to function reference
+  // 'newswire' and 'blogpost' will be handled directly in loadPage as they fetch dynamic data
+};
 
-  function renderApp() {
-    const app = document.getElementById("app");
-    if (!siteOnline) {
-      app.innerHTML = `<main id="main-content" class="flex-grow container mx-auto px-4 py-8 max-w-5xl"></main>`;
-    } else {
-      app.innerHTML = `
+function renderApp() {
+  const app = document.getElementById("app");
+  if (!app) return;
+
+  if (!siteOnline) {
+    app.innerHTML = `<main id="main-content" class="flex-grow container mx-auto px-4 py-8 max-w-5xl"></main>`;
+  } else {
+    app.innerHTML = `
         ${navbarHTML}
         <main id="main-content" class="flex-grow container mx-auto px-4 py-8 max-w-7xl"></main>
         ${footerHTML}
       `;
-    }
+  }
+}
+
+async function loadPage(page, gameName, blogPostId) {
+  const mainContent = document.getElementById("main-content");
+  if (!mainContent) return;
+
+  if (!siteOnline) {
+    mainContent.innerHTML = renderOfflinePage();
+    document.title = "Offline ・ GameLightFam";
+    return;
   }
 
-  function loadPage(page, gameName, blogPostId) {
-    const mainContent = document.getElementById("main-content");
-    if (!mainContent) return;
+  // Clear main content while loading
+  mainContent.innerHTML = `<p class="text-center text-indigo-300 text-xl mt-20 font-orbitron select-none">Loading...</p>`;
+  document.title = "Loading... ・ GameLightFam";
 
-    if (!siteOnline) {
-      mainContent.innerHTML = renderOfflinePage();
-      document.title = "Offline ・ GameLightFam";
-      return;
-    }
+  if (page === "details") {
+    const gameIndex = gamesData.findIndex((g) => g.name === gameName);
+    const game = gamesData[gameIndex];
+    mainContent.innerHTML = renderGameDetails(game);
+    document.title = game? game.name + " ・ GameLightFam" : "GameLightFam";
 
-    if (page === "details") {
-      const gameIndex = gamesData.findIndex((g) => g.name === gameName);
-      const game = gamesData[gameIndex];
-      mainContent.innerHTML = renderGameDetails(game);
-      document.title = game ? game.name + " ・ GameLightFam" : "GameLightFam";
-
-      if (game) {
-        const mainScreenshot = document.getElementById("main-screenshot");
-        const thumbnails = mainContent.querySelectorAll("img.thumbnail");
-        thumbnails.forEach((thumb) => {
-          thumb.addEventListener("click", () => {
-            mainScreenshot.src = thumb.src;
-            mainScreenshot.alt = thumb.alt;
-            thumbnails.forEach(t => t.classList.remove("thumbnail-selected"));
-            thumb.classList.add("thumbnail-selected");
-          });
-          thumb.addEventListener("keydown", (e) => {
-            if (e.key === "Enter" || e.key === " ") {
-              e.preventDefault();
-              thumb.click();
-            }
-          });
+    if (game) {
+      const mainScreenshot = document.getElementById("main-screenshot");
+      const thumbnails = mainContent.querySelectorAll("img.thumbnail");
+      thumbnails.forEach((thumb) => {
+        thumb.addEventListener("click", () => {
+          mainScreenshot.src = thumb.src;
+          mainScreenshot.alt = thumb.alt;
+          thumbnails.forEach(t => t.classList.remove("thumbnail-selected"));
+          thumb.classList.add("thumbnail-selected");
         });
-        if (thumbnails.length > 0) {
-          thumbnails[0].classList.add("thumbnail-selected");
-        }
+        thumb.addEventListener("keydown", (e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            thumb.click();
+          }
+        });
+      });
+      if (thumbnails.length > 0) {
+        thumbnails[0].classList.add("thumbnail-selected");
       }
-    } else if (page === "blogpost") {
-      const post = blogPosts.find(p => p.id === blogPostId);
-      mainContent.innerHTML = renderBlogPost(post);
-      document.title = post ? post.title + " ・ GameLightFam" : "Blog Post ・ GameLightFam";
-    } else if (pages[page]) {
-      if (typeof pages[page] === "function") {
-        mainContent.innerHTML = pages[page]();
-      } else {
-        mainContent.innerHTML = pages[page];
-      }
-      document.title =
-        page.charAt(0).toUpperCase() + page.slice(1) + " ・ GameLightFam";
-      if (page === "faq") {
-        setupFAQToggle();
-      } else if (page === "newswire") {
-        // No API fetch needed, content is static from blogPosts
-      } else if (page === "contact") {
-        setupContactForm();
-      }
-    } else {
-      mainContent.innerHTML = `<p class="text-center text-indigo-300 text-xl mt-20 font-orbitron select-none">Page not found.</p>`;
-      document.title = "Page Not Found ・ GameLightFam";
     }
+  } else if (page === "newswire") {
+    await fetchAndRenderPosts(blogId, apiKey); // Fetch and render posts for the newswire page
+    document.title = "Newswire ・ GameLightFam";
+  } else if (page === "blogpost") {
+    // Ensure blogPosts are loaded before trying to render a single post
+    if (blogPosts.length === 0) {
+      // If navigating directly to a blog post, fetch all posts first
+      await fetchBlogPosts(blogId, apiKey);
+    }
+    mainContent.innerHTML = renderBlogPost(blogPostId);
+    const post = blogPosts.find(p => p.id == blogPostId);
+    document.title = post? post.title + " ・ GameLightFam" : "Blog Post ・ GameLightFam";
+  } else if (pages[page]) {
+    mainContent.innerHTML = pages[page](); // Call the function to get HTML
+    document.title = page.charAt(0).toUpperCase() + page.slice(1) + " ・ GameLightFam";
+    if (page === "faq") {
+      setupFAQToggle();
+    } else if (page === "contact") {
+      setupContactForm();
+    }
+  } else {
+    mainContent.innerHTML = `<p class="text-center text-indigo-300 text-xl mt-20 font-orbitron select-none">Page not found.</p>`;
+    document.title = "Page Not Found ・ GameLightFam";
   }
+}
 
-  function renderOfflinePage() {
-    return `
+function renderOfflinePage() {
+  return `
     <section class="offline-container min-h-screen text-indigo-200 flex flex-col justify-center items-center p-6 text-center font-orbitron select-none">
       <div class="flex flex-col items-center justify-center max-w-xs w-full">
         <img src="https://static.wixstatic.com/media/66c613_3454970f97e64b04a7cac86647b7a4ef~mv2.png" alt="Illustration of a computer screen with maintenance tools and a caution sign in neon purple and blue" class="w-full h-auto rounded-2xl shadow-lg" />
@@ -604,211 +620,266 @@
       </div>
     </section>
     `;
-  }
+}
 
-  function handleNavClick(e) {
-    if (e.target.matches("a[data-page]")) {
-      e.preventDefault();
-      const page = e.target.getAttribute("data-page");
-      history.pushState({ page }, "", `?page=${page}`);
-      loadPage(page);
-      closeMobileMenu();
-    } else if (e.target.closest("a[data-page]")) {
-      e.preventDefault();
-      const link = e.target.closest("a[data-page]");
-      const page = link.getAttribute("data-page");
-      history.pushState({ page }, "", `?page=${page}`);
-      loadPage(page);
-      closeMobileMenu();
-    }
+async function handleNavClick(e) {
+  const link = e.target.closest("a[data-page]");
+  if (link) {
+    e.preventDefault();
+    const page = link.getAttribute("data-page");
+    // For blogpost, we need the ID, which isn't in the simple nav link
+    // So for newswire, just push the page state.
+    history.pushState({ page }, "", `?page=${page}`);
+    await loadPage(page);
+    closeMobileMenu();
   }
+}
 
-  function handleGameLinkClick(e) {
-    const link = e.target.closest("a");
-    if (!link) return;
-    const url = new URL(link.href);
-    const params = new URLSearchParams(url.search);
-    if (params.get("page") === "details" && params.has("game")) {
-      e.preventDefault();
-      const gameName = params.get("game");
-      history.pushState(
-        { page: "details", game: gameName },
-        "",
-        `?page=details&game=${encodeURIComponent(gameName)}`
-      );
-      loadPage("details", gameName);
-      closeMobileMenu();
-    } else if (params.get("page") === "blogpost" && params.has("id")) {
-      e.preventDefault();
-      const postId = params.get("id");
-      history.pushState(
-        { page: "blogpost", id: postId },
-        "",
-        `?page=blogpost&id=${encodeURIComponent(postId)}`
-      );
-      loadPage("blogpost", null, postId);
-      closeMobileMenu();
-    }
+async function handleGameLinkClick(e) {
+  const link = e.target.closest("a");
+  if (!link) return;
+  const url = new URL(link.href);
+  const params = new URLSearchParams(url.search);
+
+  if (params.get("page") === "details" && params.has("game")) {
+    e.preventDefault();
+    const gameName = params.get("game");
+    history.pushState(
+      { page: "details", game: gameName },
+      "",
+      `?page=details&game=${encodeURIComponent(gameName)}`
+    );
+    await loadPage("details", gameName);
+    closeMobileMenu();
+  } else if (params.get("page") === "blogpost" && params.has("id")) {
+    e.preventDefault();
+    const postId = params.get("id");
+    history.pushState(
+      { page: "blogpost", id: postId },
+      "",
+      `?page=blogpost&id=${encodeURIComponent(postId)}`
+    );
+    await loadPage("blogpost", null, postId);
+    closeMobileMenu();
   }
+}
 
-  function setupMenuToggle() {
-    const menuToggle = document.getElementById("menu-toggle");
-    const mobileNavLinks = document.getElementById("mobile-nav-links");
-    if (!menuToggle || !mobileNavLinks) return;
-    menuToggle.addEventListener("click", () => {
-      const expanded = menuToggle.getAttribute("aria-expanded") === "true" || false;
-      menuToggle.setAttribute("aria-expanded", !expanded);
-      mobileNavLinks.classList.toggle("hidden");
+function setupMenuToggle() {
+  const menuToggle = document.getElementById("menu-toggle");
+  const mobileNavLinks = document.getElementById("mobile-nav-links");
+  if (!menuToggle ||!mobileNavLinks) return;
+  menuToggle.addEventListener("click", () => {
+    const expanded = menuToggle.getAttribute("aria-expanded") === "true" || false;
+    menuToggle.setAttribute("aria-expanded",!expanded);
+    mobileNavLinks.classList.toggle("hidden");
+  });
+}
+function closeMobileMenu() {
+  const mobileNavLinks = document.getElementById("mobile-nav-links");
+  const menuToggle = document.getElementById("menu-toggle");
+  if (mobileNavLinks &&!mobileNavLinks.classList.contains("hidden")) {
+    mobileNavLinks.classList.add("hidden");
+    menuToggle.setAttribute("aria-expanded", false);
+  }
+}
+
+function setupFAQToggle() {
+  const faqQuestions = document.querySelectorAll(".faq-question");
+  faqQuestions.forEach((question) => {
+    question.addEventListener("click", () => {
+      const answer = question.nextElementSibling;
+      const expanded = question.getAttribute("aria-expanded") === "true";
+      if (expanded) {
+        question.setAttribute("aria-expanded", "false");
+        answer.style.maxHeight = null;
+        answer.classList.remove("open");
+      } else {
+        question.setAttribute("aria-expanded", "true");
+        answer.style.maxHeight = answer.scrollHeight + "px";
+        answer.classList.add("open");
+      }
     });
-  }
-  function closeMobileMenu() {
-    const mobileNavLinks = document.getElementById("mobile-nav-links");
-    const menuToggle = document.getElementById("menu-toggle");
-    if (mobileNavLinks && !mobileNavLinks.classList.contains("hidden")) {
-      mobileNavLinks.classList.add("hidden");
-      menuToggle.setAttribute("aria-expanded", false);
-    }
-  }
-
-  function setupFAQToggle() {
-    const faqQuestions = document.querySelectorAll(".faq-question");
-    faqQuestions.forEach((question) => {
-      question.addEventListener("click", () => {
-        const answer = question.nextElementSibling;
-        const expanded = question.getAttribute("aria-expanded") === "true";
-        if (expanded) {
-          question.setAttribute("aria-expanded", "false");
-          answer.style.maxHeight = null;
-          answer.classList.remove("open");
-        } else {
-          question.setAttribute("aria-expanded", "true");
-          answer.style.maxHeight = answer.scrollHeight + "px";
-          answer.classList.add("open");
-        }
-      });
-      question.addEventListener("keydown", (e) => {
-        if (e.key === "Enter" || e.key === " ") {
-          e.preventDefault();
-          question.click();
-        }
-      });
+    question.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        question.click();
+      }
     });
+  });
+}
+
+// Load EmailJS SDK asynchronously
+(function () {
+  const script = document.createElement("script");
+  script.src = "https://cdn.emailjs.com/sdk/3.2.0/email.min.js";
+  script.onload = () => {
+    if (window.emailjs) {
+      emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your EmailJS public key
+    }
+  };
+  document.head.appendChild(script);
+})();
+
+// --- Fetch posts and render news list ---
+const blogId = "4111203618850589496";
+const apiKey = "AIzaSyDEqcAcV2P6NudKaTZvSHpkHsZqmXFzzmw";
+
+// NEW: Function to fetch blog posts and populate the global blogPosts array
+async function fetchBlogPosts(blogId, apiKey) {
+  try {
+    const response = await fetch(
+      `https://www.googleapis.com/blogger/v3/blogs/${blogId}/posts?key=${apiKey}&maxResults=6`
+    );
+    if (!response.ok) throw new Error("Network response was not ok");
+
+    const data = await response.json();
+    if (data.items) {
+      blogPosts = data.items.map(post => {
+        const tempDiv = document.createElement("div");
+        tempDiv.innerHTML = post.content;
+        const imgElement = tempDiv.querySelector("img");
+        // Clean up content: strip tags and decode HTML entities for description,
+        // keep full HTML for blog post content.
+        const contentText = tempDiv.textContent || tempDiv.innerText || "";
+        const sanitizedContent = post.content.replace(/<img[^>]*>/g, ''); // Remove image tags from content
+
+        return {
+          id: post.id,
+          title: post.title,
+          date: post.published,
+          // Store the raw HTML content for display on the single blog post page
+          content: post.content,
+          // Extract a plain text description for list views
+          description: contentText.substring(0, 150) + (contentText.length > 150? '...' : ''),
+          image: imgElement? imgElement.src : "https://placehold.co/600x300/png?text=GameLightFam+News&font=Orbitron",
+          url: post.url || "#"
+        };
+      });
+    } else {
+      blogPosts = [];
+    }
+  } catch (error) {
+    console.error("Error fetching news posts:", error);
+    blogPosts = []; // Clear posts on error
+    // Potentially render an error message to the user
   }
+}
 
-   // Blog posts fetch function
-      async function fetchPosts(blogId, apiKey) {
-        const newsContainer = document.getElementById("news-container");
-        if (!newsContainer) return;
-        try {
-          const response = await fetch(
-            `https://www.googleapis.com/blogger/v3/blogs/${blogId}/posts?key=${apiKey}&maxResults=6`
-          );
-          if (!response.ok) throw new Error("Network response was not ok");
-          const data = await response.json();
-          if (!data.items || data.items.length === 0) {
-            newsContainer.innerHTML = `<p class="text-center text-indigo-300 col-span-full select-none">No news posts available at the moment.</p>`;
-            return;
-          }
-          let postsHTML = "";
-          data.items.forEach((post) => {
-            let imgSrc =
-              "https://placehold.co/600x300/png?text=HuntersHorrorEasy+News&font=Orbitron";
-            const imgMatch = post.content.match(/<img[^>]+src="([^">]+)"/i);
-            if (imgMatch && imgMatch[1]) {
-              imgSrc = imgMatch[1];
-            }
-            const publishedDate = new Date(post.published).toLocaleDateString(
-              undefined,
-              { year: "numeric", month: "long", day: "numeric" }
-            );
-            const tempDiv = document.createElement("div");
-            tempDiv.innerHTML = post.content;
-            const textContent = tempDiv.textContent || tempDiv.innerText || "";
-            const snippet =
-              textContent.length > 150
-                ? textContent.slice(0, 150) + "..."
-                : textContent;
+// MODIFIED: fetchAndRenderPosts now uses the global blogPosts array
+async function fetchAndRenderPosts(blogId, apiKey) {
+  const mainContent = document.getElementById("main-content");
+  if (!mainContent) return;
 
-            postsHTML += `
-              <article tabindex="0" class="post bg-indigo-800 rounded-lg shadow-md p-4 flex flex-col text-center text-indigo-200 focus:outline-none focus:ring-4 focus:ring-indigo-500">
-                <div class="relative rounded-md overflow-hidden mb-4 w-full h-40 sm:h-48">
-                  <img src="${imgSrc}" alt="News post titled '${post.title}' image" loading="lazy" class="object-cover w-full h-full" />
-                  <time datetime="${post.published}" class="absolute bottom-2 left-2 bg-indigo-900 bg-opacity-75 text-indigo-300 text-xs px-2 py-1 rounded select-none">${publishedDate}</time>
-                </div>
-                <h3 class="font-semibold text-lg mb-1">${post.title}</h3>
-                <p class="flex-grow mb-4 break-words">${snippet}</p>
-                <a href="${post.url}" target="_blank" rel="noopener noreferrer" class="read-more text-indigo-300 font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-indigo-400 rounded" tabindex="0">Read More</a>
-              </article>
-            `;
-          });
-          newsContainer.innerHTML = postsHTML;
-        } catch (error) {
-          newsContainer.innerHTML = `<p class="text-center text-red-500 col-span-full select-none">Failed to load news posts. Please try again later.</p>`;
-          console.error("Error fetching news posts:", error);
-        }
-      }
+  // Show a loading message while fetching
+  mainContent.innerHTML = `<p class="text-center text-indigo-300 text-xl mt-20 font-orbitron select-none">Loading latest news...</p>`;
 
-      const blogId = "8902610350237703395";
-      const apiKey = "AIzaSyCJOXhX2bNmntaaP7zmeQPKP11mw0KR8c0";
+  await fetchBlogPosts(blogId, apiKey); // Populate global blogPosts
 
-  function setupContactForm() {
-    const form = document.getElementById("contactForm");
-    const messageEl = document.getElementById("formMessage");
-    if (!form || !messageEl) return;
+  if (blogPosts.length > 0) {
+    mainContent.innerHTML = renderNewswire(blogPosts);
+  } else {
+    mainContent.innerHTML = `<p class="text-center text-indigo-300 col-span-full select-none">Failed to load news posts or no posts available. Please try again later.</p>`;
+  }
+}
 
-    form.addEventListener("submit", (e) => {
-      e.preventDefault();
-      messageEl.classList.add("hidden");
-      const name = form.name.value.trim();
-      const email = form.email.value.trim();
-      const subject = form.subject.value.trim();
-      const message = form.message.value.trim();
+function setupContactForm() {
+  const form = document.getElementById("contactForm");
+  const messageEl = document.getElementById("formMessage");
+  if (!form ||!messageEl) return;
 
-      if (!name || !email || !subject || !message) {
-        messageEl.textContent = "Please fill in all fields.";
-        messageEl.classList.remove("hidden");
-        return;
-      }
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailRegex.test(email)) {
-        messageEl.textContent = "Please enter a valid email address.";
-        messageEl.classList.remove("hidden");
-        return;
-      }
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    messageEl.classList.add("hidden");
+    const name = form.name.value.trim();
+    const email = form.email.value.trim();
+    const subject = form.subject.value.trim();
+    const message = form.message.value.trim();
 
-      messageEl.textContent = "Sending message...";
+    if (!name ||!email ||!subject ||!message) {
+      messageEl.textContent = "Please fill in all fields.";
       messageEl.classList.remove("hidden");
-
-      setTimeout(() => {
-        messageEl.textContent = "Thank you for contacting us! We will get back to you soon.";
-        form.reset();
-      }, 1500);
-    });
-  }
-
-  function initialLoad() {
-    const urlParams = new URLSearchParams(window.location.search);
-    const page = urlParams.get("page") || "home";
-    const gameName = urlParams.get("game");
-    const blogPostId = urlParams.get("id");
-    loadPage(page, gameName, blogPostId);
-  }
-
-  window.addEventListener("popstate", (event) => {
-    const state = event.state || {};
-    const page = state.page || "home";
-    const gameName = state.game;
-    const blogPostId = state.id;
-    loadPage(page, gameName, blogPostId);
-  });
-
-  document.addEventListener("DOMContentLoaded", () => {
-    renderApp();
-    setupMenuToggle();
-    if(siteOnline) {
-      document.getElementById("nav-links").addEventListener("click", handleNavClick);
-      document.getElementById("mobile-nav-links").addEventListener("click", handleNavClick);
+      return;
     }
-    document.getElementById("main-content").addEventListener("click", handleGameLinkClick);
-    initialLoad();
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      messageEl.textContent = "Please enter a valid email address.";
+      messageEl.classList.remove("hidden");
+      return;
+    }
+
+    messageEl.textContent = "Sending message...";
+    messageEl.classList.remove("hidden");
+
+    setTimeout(() => {
+      messageEl.textContent = "Thank you for contacting us! We will get back to you soon.";
+      form.reset();
+    }, 1500);
   });
+}
+
+// MODIFIED: initialLoad is now async to wait for API calls
+async function initialLoad() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const page = urlParams.get("page") || "home";
+  const gameName = urlParams.get("game");
+  const blogPostId = urlParams.get("id");
+
+  // Pre-fetch blog posts if not already loaded, especially if starting on a blog related page
+  if (page === "newswire" || page === "blogpost") {
+      await fetchBlogPosts(blogId, apiKey);
+  }
+
+  await loadPage(page, gameName, blogPostId);
+}
+
+// MODIFIED: popstate listener is now async
+window.addEventListener("popstate", async (event) => {
+  const state = event.state || {};
+  const page = state.page || "home";
+  const gameName = state.game;
+  const blogPostId = state.id;
+
+  // Pre-fetch blog posts if navigating back to a blog related page and they aren't loaded
+  if ((page === "newswire" || page === "blogpost") && blogPosts.length === 0) {
+      await fetchBlogPosts(blogId, apiKey);
+  }
+  await loadPage(page, gameName, blogPostId);
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  renderApp();
+  setupMenuToggle();
+  if (siteOnline) {
+    document.getElementById("nav-links").addEventListener("click", handleNavClick);
+    document.getElementById("mobile-nav-links").addEventListener("click", handleNavClick);
+  }
+  // NEW: Add a general click listener to the document body to handle game and blog links
+  // This is more robust for dynamically loaded content
+  document.body.addEventListener("click", async (e) => {
+    // Check if the clicked element or its parent is an anchor tag with data-page
+    const anchor = e.target.closest("a[data-page]");
+    if (anchor) {
+      e.preventDefault();
+      const page = anchor.getAttribute("data-page");
+      const gameName = anchor.getAttribute("href").includes("game=")? new URLSearchParams(anchor.search).get("game") : null;
+      const blogPostId = anchor.getAttribute("href").includes("id=")? new URLSearchParams(anchor.search).get("id") : null;
+
+      // Update history state
+      let state = { page };
+      let url = `?page=${page}`;
+      if (gameName) {
+        state.game = gameName;
+        url += `&game=${encodeURIComponent(gameName)}`;
+      }
+      if (blogPostId) {
+        state.id = blogPostId;
+        url += `&id=${encodeURIComponent(blogPostId)}`;
+      }
+
+      history.pushState(state, "", url);
+      await loadPage(page, gameName, blogPostId);
+      closeMobileMenu();
+    }
+  });
+  initialLoad();
+});
