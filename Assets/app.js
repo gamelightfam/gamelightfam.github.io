@@ -6,7 +6,7 @@ const siteStatus = {
   message: "We’re aware that our experiences are currently private due to Roblox being banned in our country starting April 10. Thank you for your patience. We’ll restore access as soon as possible."
 };
 
-const gamesData = [
+const chartsData = [
   {
     name: "FREE ADMIN",
     image:
@@ -35,7 +35,7 @@ const gamesData = [
       Platform: "PC, Mobile"
     },
     maturity: "Crude humor (Mild), Violence (Repeated/Mild)",
-    isPublic: true
+    isPublic: false
   },
   {
     name: "PrisonBreak Life",
@@ -66,7 +66,7 @@ const gamesData = [
       Platform: "PC, Mobile, Xbox"
     },
     maturity: "Violence (Repeated/Mild)",
-    isPublic: true
+    isPublic: false
   },
 ];
 
@@ -96,7 +96,7 @@ const navbarHTML = `
         <li role="none">
           <a role="menuitem" data-page="games"
              class="nav-link px-3 py-2 rounded-xl hover:text-white hover:bg-indigo-800/60 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400"
-             href="?page=games">Games</a>
+             href="?page=games">Charts</a>
         </li>
         <li role="none">
           <a role="menuitem" data-page="newswire"
@@ -221,7 +221,7 @@ function renderGames() {
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
   `;
 
-  gamesData.forEach((game) => {
+  chartsData.forEach((game) => {
     const safeName = game.name.replace(/"/g, '&quot;');
     html += `
       <article class="group relative overflow-hidden rounded-2xl bg-indigo-950/40 ring-1 ring-indigo-800/50 shadow-lg shadow-indigo-950/30 transition hover:-translate-y-0.5 hover:shadow-xl focus-within:ring-2 focus-within:ring-indigo-400" tabindex="0" aria-label="Game card for ${safeName}">
@@ -311,10 +311,9 @@ function renderGameDetails(game) {
                 <i class="fas fa-play"></i> Play Now
               </a>
             ` : `
-              <span class="text-indigo-400 font-semibold italic select-none" aria-label="Game is private and cannot be played">This game is currently not available to play.</span>
+              <span class="text-indigo-400 font-semibold italic select-none" aria-label="Game is private and cannot be played">This experience is currently not available to play.</span>
             `}
-            <a href="?page=games" data-page="games" class="btn-back" aria-label="Back to Games" tabindex="0" title="Back to Games">
-              <i class="fas fa-arrow-left"></i> Back
+            <a href="?page=games" data-page="games" class="btn-back" aria-label="Back to Games" tabindex="0" title="Back to charts"> Back to charts
             </a>
           </div>
         </div>
@@ -483,7 +482,7 @@ function renderAbout() {
 }
 
 function renderHome() {
-  const featuredGames = gamesData.slice(0, 3);
+  const featuredGames = chartsData.slice(0, 3);
   let featuredGamesHTML = "";
   featuredGames.forEach((game) => {
     const desc = game.description && game.description.trim()!== ""? game.description : "No description available";
@@ -629,8 +628,8 @@ async function loadPage(page, gameName, blogPostId) {
   document.title = "Loading... ・ GameLightFam";
 
   if (page === "details") {
-    const gameIndex = gamesData.findIndex((g) => g.name === gameName);
-    const game = gamesData[gameIndex];
+    const gameIndex = chartsData.findIndex((g) => g.name === gameName);
+    const game = chartsData[gameIndex];
     mainContent.innerHTML = renderGameDetails(game);
     document.title = game? game.name + " ・ GameLightFam" : "GameLightFam";
 
