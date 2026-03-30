@@ -1,14 +1,20 @@
 const siteOnline = true;
+const shutdown = false;
+
+const siteStatus = {
+  showBanner: true,
+  message: "We’re aware that our experiences are currently private due to Roblox being banned in our country starting April 10. Thank you for your patience. We’ll restore access as soon as possible."
+};
+
 const gamesData = [
   {
     name: "FREE ADMIN",
     image:
-      "https://tr.rbxcdn.com/180DAY-b0c3cfa83c9b22a66f99ab2c86b255c2/150/150/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-245bed370a60b2a7bc7b5e2c8c92a9f7/150/150/Image/Webp/noFilter",
     description:
       "Welcome to Free Admin! You have cool Admin Powers, which allow you to do awesome Admin Commands.<br><br>❓The Prefix is ;<br>💬 Type ;cmds to view all Admin Commands!<br><br>🔨 FREE ADMIN 💥 allows you to:<br>⭐ Play with Admin Commands!<br>🗡️💣🔫 Fight with Hundreds of Free Powerful Gears!<br>😎💬 Chat and Play with Others!",
     screenshots: [
-      "https://tr.rbxcdn.com/180DAY-c584bc3a17518be78f0d874cbae00f77/768/432/Image/Webp/noFilter",
-      "https://tr.rbxcdn.com/180DAY-dab6a3eb758071f5904839f6232576c1/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-715868ce8a396b09b0c4c88172206c5d/768/432/Image/Webp/noFilter",
     ],
     genre: "Action, Roleplay",
     subgenre: "Open World Action",
@@ -70,29 +76,46 @@ const comingSoonGames = [];
 let blogPosts = [];
 
 const navbarHTML = `
-    <nav class="bg-gradient-to-r from-indigo-900 via-purple-900 to-indigo-900 shadow-md sticky top-0 z-50 border-b border-indigo-700">
-      <div class="container mx-auto flex items-center justify-between px-4 py-3 md:py-4">
-        <a class="flex items-center" href="?page=home" data-page="home" aria-label="GameLightFam Home">
-          <img alt="GameLightFam Logo, stylized letters GLF in neon purple and blue with futuristic style" class="h-12 w-12" height="48" src="https://static.wixstatic.com/media/66c613_3454970f97e64b04a7cac86647b7a4ef~mv2.png" width="48"/>
-        </a>
-        <button aria-expanded="false" aria-label="Toggle menu" class="md:hidden flex flex-col space-y-1.5 focus:outline-none focus:ring-2 focus:ring-indigo-400" id="menu-toggle">
-          <span class="block w-7 h-0.5 bg-indigo-300 rounded"></span>
-          <span class="block w-7 h-0.5 bg-indigo-300 rounded"></span>
-          <span class="block w-7 h-0.5 bg-indigo-300 rounded"></span>
-        </button>
-        <ul class="hidden md:flex space-x-8 text-indigo-200 font-semibold text-lg" id="nav-links" role="menubar">
-          <li role="none"><a role="menuitem" class="hover:text-indigo-400 transition focus:outline-none focus:ring-2 focus:ring-indigo-400 rounded" href="?page=home" data-page="home" tabindex="0">Home</a></li>
-          <li role="none"><a role="menuitem" class="hover:text-indigo-400 transition focus:outline-none focus:ring-2 focus:ring-indigo-400 rounded" href="?page=games" data-page="games" tabindex="0">Games</a></li>
-          <li role="none"><a role="menuitem" class="hover:text-indigo-400 transition focus:outline-none focus:ring-2 focus:ring-indigo-400 rounded" href="?page=newswire" data-page="newswire" tabindex="0">Newswire</a></li>
-        </ul>
-      </div>
-      <ul class="md:hidden hidden flex-col space-y-4 bg-indigo-900 bg-opacity-90 px-6 py-6 text-indigo-200 font-semibold text-lg" id="mobile-nav-links" role="menu" aria-label="Mobile navigation">
-        <li role="none"><a role="menuitem" class="block hover:text-indigo-400 transition focus:outline-none focus:ring-2 focus:ring-indigo-400 rounded" href="?page=home" data-page="home" tabindex="0">Home</a></li>
-        <li role="none"><a role="menuitem" class="block hover:text-indigo-400 transition focus:outline-none focus:ring-2 focus:ring-indigo-400 rounded" href="?page=games" data-page="games" tabindex="0">Games</a></li>
-        <li role="none"><a role="menuitem" class="block hover:text-indigo-400 transition focus:outline-none focus:ring-2 focus:ring-indigo-400 rounded" href="?page=newswire" data-page="newswire" tabindex="0">Newswire</a></li>
+  <nav class="sticky top-0 z-50 border-b border-indigo-700/60 bg-indigo-950/70 backdrop-blur supports-[backdrop-filter]:bg-indigo-950/50">
+    <div class="container mx-auto flex items-center justify-between px-4 py-3 md:py-4">
+      <a class="flex items-center gap-3 group" href="?page=home" data-page="home" aria-label="GameLightFam Home">
+        <img alt="GameLightFam Logo" class="h-10 w-10 md:h-12 md:w-12" height="48" width="48" src="https://static.wixstatic.com/media/66c613_3454970f97e64b04a7cac86647b7a4ef~mv2.png"/>
+      </a>
+      <button id="menu-toggle" class="md:hidden inline-flex items-center justify-center rounded-xl p-2 text-indigo-200 hover:text-white hover:bg-indigo-800/60 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400" aria-expanded="false" aria-controls="mobile-nav-links" aria-label="Toggle menu">
+        <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/>
+        </svg>
+      </button>
+
+      <ul id="nav-links" class="hidden md:flex items-center gap-2 text-indigo-200 font-semibold" role="menubar">
+        <li role="none">
+          <a role="menuitem" data-page="home"
+             class="nav-link px-3 py-2 rounded-xl hover:text-white hover:bg-indigo-800/60 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400"
+             href="?page=home">Home</a>
+        </li>
+        <li role="none">
+          <a role="menuitem" data-page="games"
+             class="nav-link px-3 py-2 rounded-xl hover:text-white hover:bg-indigo-800/60 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400"
+             href="?page=games">Games</a>
+        </li>
+        <li role="none">
+          <a role="menuitem" data-page="newswire"
+             class="nav-link px-3 py-2 rounded-xl hover:text-white hover:bg-indigo-800/60 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400"
+             href="?page=newswire">Newswire</a>
+        </li>
       </ul>
-    </nav>
-  `;
+    </div>
+
+    <!-- Mobile -->
+    <ul id="mobile-nav-links"
+        class="md:hidden hidden flex-col gap-2 border-t border-indigo-800/60 bg-indigo-950/90 px-4 py-4 text-indigo-200 font-semibold"
+        role="menu" aria-label="Mobile navigation">
+      <li role="none"><a role="menuitem" data-page="home" class="block px-3 py-2 rounded-xl hover:text-white hover:bg-indigo-800/60 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400" href="?page=home">Home</a></li>
+      <li role="none"><a role="menuitem" data-page="games" class="block px-3 py-2 rounded-xl hover:text-white hover:bg-indigo-800/60 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400" href="?page=games">Games</a></li>
+      <li role="none"><a role="menuitem" data-page="newswire" class="block px-3 py-2 rounded-xl hover:text-white hover:bg-indigo-800/60 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400" href="?page=newswire">Newswire</a></li>
+    </ul>
+  </nav>
+`;
 
 const footerHTML = `
     <footer class="bg-indigo-900 text-indigo-200 mt-auto border-t border-indigo-700">
@@ -194,24 +217,40 @@ function renderPrivacy() {
 function renderGames() {
   let html = `
     <main id="main-content" class="flex-grow container mx-auto px-4 py-8 max-w-7xl">
-      <h2 class="text-4xl font-extrabold mb-10 text-indigo-400 font-orbitron select-none">Our Games</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
-    `;
+      <h2 class="text-4xl font-extrabold mb-10 text-indigo-300 font-orbitron select-none">Our Games</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+  `;
+
   gamesData.forEach((game) => {
+    const safeName = game.name.replace(/"/g, '&quot;');
     html += `
-        <article class="bg-indigo-0 rounded-xl shadow-x0 overflow-hidden flex flex-col relative focus-within:ring-4 focus-within:ring-indigo-500 focus-within:outline-none transition-transform hover:scale-[1.03]" tabindex="0" aria-label="Game card for ${game.name}">
-          <a href="?page=details&game=${encodeURIComponent(
-            game.name
-          )}" data-page="details" class="block focus:outline-none focus:ring-0" tabindex="-1">
-            <div class="game-image-container relative">
-              <img src="${game.image}" alt="Cover image of the game ${game.name} showing a thematic scene" loading="lazy" class="w-full h-52 sm:h-56 object-contain rounded-b-x1">
+      <article class="group relative overflow-hidden rounded-2xl bg-indigo-950/40 ring-1 ring-indigo-800/50 shadow-lg shadow-indigo-950/30 transition hover:-translate-y-0.5 hover:shadow-xl focus-within:ring-2 focus-within:ring-indigo-400" tabindex="0" aria-label="Game card for ${safeName}">
+        <a href="?page=details&game=${encodeURIComponent(game.name)}"
+           data-page="details"
+           class="block focus:outline-none"
+           aria-label="Open ${safeName} details">
+          <div class="relative aspect-[16/9] w-full overflow-hidden">
+            <img src="${game.image}"
+                 alt="Cover image of ${safeName}"
+                 loading="lazy"
+                 class="h-full w-full object-cover transition duration-300 group-hover:scale-[1.03]" />
+            <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-indigo-950/80 via-indigo-950/20 to-transparent"></div>
+
+            <!-- Title + CTA -->
+            <div class="absolute bottom-0 left-0 right-0 p-4 flex items-end justify-between gap-3">
+              <h3 class="truncate text-lg md:text-xl font-semibold text-white drop-shadow-[0_1px_1px_rgba(0,0,0,0.6)]">
+                ${game.name}
+              </h3>
+              <span class="shrink-0 rounded-full bg-white/10 px-2.5 py-1 text-xs font-medium text-indigo-100 ring-1 ring-white/15 backdrop-blur">
+                View
+              </span>
             </div>
-            <div class="p-6 flex-grow flex flex-col">
-              <h3 class="text-2xl font-semibold mb-3 text-indigo-200">${game.name}</h3>
-          </a>
-        </article>
-      `;
+          </div>
+        </a>
+      </article>
+    `;
   });
+
   html += `</div></main>`;
   return html;
 }
@@ -233,24 +272,28 @@ function renderGameDetails(game) {
    .join("");
 
   const desc = game.description && game.description.trim()!== ""? game.description : "No description available";
-
   const isPublic = game.isPublic === true;
+  const shots = Array.isArray(game.screenshots)? game.screenshots : [];
 
   return `
     <main id="main-content" class="flex-grow container mx-auto px-4 py-8 max-w-6xl">
     <article class="bg-indigo-800 rounded-3xl shadow-2xl p-8 flex flex-col gap-12">
       <div class="game-details-main flex flex-col md:flex-row gap-8">
-        <div class="md:w-1/2 relative flex-shrink-0 rounded-3xl overflow-hidden shadow-2xl">
-          <img id="main-screenshot" src="${game.screenshots[0]}" alt="Main screenshot of the game ${game.name} showing gameplay or environment" class="w-full object-cover max-h-[480px] rounded-3xl">
-          <div class="thumbnails-container mt-4 px-1 flex gap-4 overflow-x-auto" role="list" aria-label="Game screenshots thumbnails">
-            ${game.screenshots.map((src, i) => `
-              <img src="${src}" alt="Screenshot ${i + 1} of the game ${game.name} showing gameplay or environment" class="w-28 h-20 object-cover rounded-lg cursor-pointer border-2 border-transparent hover:border-indigo-400 transition thumbnail flex-shrink-0" tabindex="0" data-index="${i}" role="listitem" />
-            `).join('')}
-          </div>
+        <div class="md:w-1/2 relative flex-shrink-0 rounded-3xl overflow-hidden shadow-2xl group">
+          <img id="main-screenshot" src="${shots[0] || ''}" alt="Main screenshot of the game ${game.name} showing gameplay or environment" class="w-full object-cover max-h-[480px] rounded-3xl select-none" draggable="false">
+          <!-- Prev/Next -->
+          <button id="shot-prev" class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white rounded-full w-10 h-10 flex items-center justify-center backdrop-blur-sm transition opacity-0 group-hover:opacity-100 focus:opacity-100" aria-label="Previous screenshot" type="button">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button id="shot-next" class="absolute right-3 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white rounded-full w-10 h-10 flex items-center justify-center backdrop-blur-sm transition opacity-0 group-hover:opacity-100 focus:opacity-100" aria-label="Next screenshot" type="button">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+          <!-- Counter -->
+          <div id="shot-counter" class="absolute bottom-3 right-3 text-xs px-2 py-1 rounded-full bg-black/50 text-white select-none">1/${shots.length || 1}</div>
         </div>
         <div class="md:w-1/2 flex flex-col justify-between text-indigo-200">
           <div class="details-header" tabindex="0" aria-label="Game title and key information">
-            <h2 class="text-4xl font-bold mb-2" style="">${game.name}</h2>
+            <h2 class="text-4xl font-bold mb-2">${game.name}</h2>
             <div class="details-meta">
               <span>
                 <label>Developer</label>
@@ -485,24 +528,44 @@ function renderHome() {
   }
 
   return `
-    <section class="full-width-banner max-w-full bg-gradient-to-r from-indigo-900 via-purple-900 to-indigo-900 text-center text-indigo-100 p-16 rounded-3xl shadow-2xl font-orbitron mx-6 sm:mx-auto max-w-7xl select-none" role="banner" aria-label="Main promotional banner">
-    <div>
-      <h1 class="text-4xl sm:text-6xl font-extrabold mb-6 leading-tight text-shadow-lg" style="">Unleashing the Potential of Metaverse Gaming</h1>
-      <p class="text-xl max-w-4xl mx-auto mb-12 font-medium">Committed to creating breakthrough experiences and original content, GameLightFam strives to achieve entertainment excellence and redefine the future of gaming.</p>
-      <a href="?page=games" data-page="games"class="bg-indigo-0 rounded-xl shadow-x0 class="cta-btn inline-block px-8 py-4 rounded-3xl font-extrabold text-indigo-900 hover:bg-indigo-300 focus:outline-none focus:ring-4 focus:ring-indigo-400" tabindex="0" aria-label="Explore all games">
-        Explore Our Games
-      </a>
+  <section class="max-w-7xl mx-4 sm:mx-auto mt-12 sm:mt-16 rounded-3xl bg-indigo-900/70 ring-1 ring-indigo-800/60 shadow-2xl p-6 sm:p-8 lg:p-10 backdrop-blur">
+  <div class="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
+    <div class="flex-1 text-indigo-100">
+      <h2 class="font-orbitron text-3xl sm:text-4xl font-extrabold text-indigo-200 mb-4">What's Up With Us?</h2>
+      <p class="text-base sm:text-lg leading-relaxed text-indigo-100/90">
+        Follow GameLightFam Studios on Facebook for dev logs, patch notes, community spotlights, and behind-the-scenes looks at how we build. We share early concepts, playtest invites, and event recaps so you can see what’s coming next and how we got there.
+      </p>
+      <ul class="mt-4 space-y-2 text-indigo-100/90 list-disc list-inside">
+        <li>Weekly updates and roadmap peeks</li>
+        <li>Creator features and mod showcases</li>
+        <li>Event schedules, giveaways, and Q&amp;As</li>
+      </ul>
+      <div class="mt-5 flex flex-wrap gap-3">
+        <a href="https://www.facebook.com/gamelightfam" target="_blank" rel="noopener"
+           class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-indigo-200 text-indigo-950 font-semibold hover:bg-white focus:outline-none focus-visible:ring-4 focus-visible:ring-indigo-400/70 transition">
+          Visit Facebook
+        </a>
+        <a href="?page=contact" data-page="contact"
+           class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-indigo-800/60 text-indigo-100 ring-1 ring-indigo-700/60 hover:bg-indigo-800 focus:outline-none focus-visible:ring-4 focus-visible:ring-indigo-400/70 transition">
+          Contact Us
+        </a>
+      </div>
     </div>
-  </section>
-  <section class="whats-up-container max-w-7xl mx-auto bg-indigo-800 rounded-3xl shadow-2xl p-8 mt-16 flex flex-col md:flex-row gap-10 text-indigo-200" aria-label="What's Up With Us Facebook feed and description">
-    <div class="whats-up-text flex-1 text-lg leading-relaxed select-text">
-      <h2 class="text-4xl font-extrabold mb-6 text-indigo-400 font-orbitron select-none">What's Up With Us?</h2>
-      <p>Stay connected with GameLightFam Studios through our Facebook page. Get the latest updates, community events, and behind-the-scenes content. Join the conversation and be part of our growing community!</p>
+
+    <div class="w-full lg:w-[380px] shrink-0">
+      <div class="rounded-2xl overflow-hidden ring-1 ring-indigo-800/60 bg-indigo-950/40 shadow-xl">
+        <iframe
+          src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fgamelightfam&tabs=timeline&width=360&height=520&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+          width="360" height="520"
+          style="border:0;overflow:hidden;border-radius:1rem;display:block;margin:auto;"
+          scrolling="no" frameborder="0" allowfullscreen="true"
+          allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+          title="GameLightFam Facebook Timeline"></iframe>
+      </div>
     </div>
-    <div class="iframe-wrapper flex-1 flex justify-center">
-      <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fgamelightfam&tabs=timeline&width=360&height=520&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="360" height="520" style="border:none;overflow:hidden;border-radius:1rem;" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" title="GameLightFam Facebook Timeline"></iframe>
-    </div>
-  </section>
+  </div>
+</section>
+ 
   <h2 class="home-section-title text-center text-indigo-400 font-orbitron mt-20 mb-12 text-4xl select-none">Featured Games</h2>
   <section class="home-games-grid max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 px-6">
     ${featuredGamesHTML}
@@ -531,11 +594,21 @@ function renderApp() {
   const app = document.getElementById("app");
   if (!app) return;
 
+  // Shutdown takes priority
+  if (typeof shutdown !== "undefined" && shutdown) {
+    app.innerHTML = `
+      <main id="main-content" class="flex-grow container mx-auto px-4 py-8 max-w-5xl">
+        ${renderShutdownPage()}
+      </main>`;
+    return;
+  }
+
   if (!siteOnline) {
     app.innerHTML = `<main id="main-content" class="flex-grow container mx-auto px-4 py-8 max-w-5xl"></main>`;
   } else {
     app.innerHTML = `
         ${navbarHTML}
+        ${renderStatusBanner()}
         <main id="main-content" class="flex-grow container mx-auto px-4 py-8 max-w-7xl"></main>
         ${footerHTML}
       `;
@@ -562,27 +635,36 @@ async function loadPage(page, gameName, blogPostId) {
     mainContent.innerHTML = renderGameDetails(game);
     document.title = game? game.name + " ・ GameLightFam" : "GameLightFam";
 
-    if (game) {
-      const mainScreenshot = document.getElementById("main-screenshot");
-      const thumbnails = mainContent.querySelectorAll("img.thumbnail");
-      thumbnails.forEach((thumb) => {
-        thumb.addEventListener("click", () => {
-          mainScreenshot.src = thumb.src;
-          mainScreenshot.alt = thumb.alt;
-          thumbnails.forEach(t => t.classList.remove("thumbnail-selected"));
-          thumb.classList.add("thumbnail-selected");
-        });
-        thumb.addEventListener("keydown", (e) => {
-          if (e.key === "Enter" || e.key === " ") {
-            e.preventDefault();
-            thumb.click();
-          }
-        });
-      });
-      if (thumbnails.length > 0) {
-        thumbnails[0].classList.add("thumbnail-selected");
-      }
-    }
+   if (game) {
+  const mainScreenshot = document.getElementById("main-screenshot");
+  const btnPrev = document.getElementById("shot-prev");
+  const btnNext = document.getElementById("shot-next");
+  const counter = document.getElementById("shot-counter");
+  const shots = Array.isArray(game.screenshots)? game.screenshots : [];
+  let idx = 0;
+
+  function updateShot(i) {
+    if (!shots.length) return;
+    idx = (i + shots.length) % shots.length;
+    mainScreenshot.src = shots[idx];
+    mainScreenshot.alt = `Screenshot ${idx + 1} of the game ${game.name} showing gameplay or environment`;
+    if (counter) counter.textContent = `${idx + 1}/${shots.length}`;
+  }
+
+  // Buttons
+  btnPrev?.addEventListener("click", () => updateShot(idx - 1));
+  btnNext?.addEventListener("click", () => updateShot(idx + 1));
+
+  // Keyboard (← / →)
+  const keyHandler = (e) => {
+    if (e.key === "ArrowLeft") { e.preventDefault(); updateShot(idx - 1); }
+    if (e.key === "ArrowRight") { e.preventDefault(); updateShot(idx + 1); }
+  };
+  document.addEventListener("keydown", keyHandler, { once: true }); // attach once per render
+
+  // Initialize counter
+  updateShot(0);
+}
   } else if (page === "newswire") {
     await fetchAndRenderPosts(blogId, apiKey); // Fetch and render posts for the newswire page
     document.title = "Newswire ・ GameLightFam";
@@ -620,6 +702,38 @@ function renderOfflinePage() {
       </div>
     </section>
     `;
+}
+
+function renderStatusBanner() {
+  if (!siteStatus.showBanner) return "";
+  return `
+    <div role="status" aria-live="polite"
+      class="bg-yellow-900/40 border-y border-yellow-600 text-yellow-100 text-center px-4 py-3 text-sm md:text-base">
+      <div class="container mx-auto max-w-7xl">
+        <strong class="font-semibold"></strong> ${siteStatus.message}
+      </div>
+    </div>
+  `;
+}
+
+function renderShutdownPage() {
+  return `
+    <section class="min-h-[70vh] flex items-center justify-center px-6">
+      <div class="max-w-2xl w-full text-center bg-indigo-900/40 border border-indigo-700 rounded-3xl p-10 shadow-2xl backdrop-blur">
+        <div class="mx-auto mb-6 h-16 w-16 rounded-2xl bg-gradient-to-br from-indigo-700 to-purple-700 flex items-center justify-center shadow-lg">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-8 w-8 text-indigo-100" fill="currentColor" aria-hidden="true">
+            <path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm1 5a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm-1 4a1 1 0 0 1 1 1v5a1 1 0 1 1-2 0v-5a1 1 0 0 1 1-1Z"/>
+          </svg>
+        </div>
+        <h1 class="text-4xl md:text-5xl font-extrabold text-indigo-200 font-orbitron mb-4">We’re currently shut down</h1>
+        <p class="text-indigo-300 text-lg md:text-xl leading-relaxed">
+          The site is permanently shut down.
+        </p>
+        <div class="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
+        </div>
+      </div>
+    </section>
+  `;
 }
 
 async function handleNavClick(e) {
