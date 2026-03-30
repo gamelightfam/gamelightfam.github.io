@@ -537,8 +537,7 @@ function renderHome() {
       </p>
       <ul class="mt-4 space-y-2 text-indigo-100/90 list-disc list-inside">
         <li>Weekly updates and roadmap peeks</li>
-        <li>Creator features and mod showcases</li>
-        <li>Event schedules, giveaways, and Q&amp;As</li>
+        <li>Event schedules</li>
       </ul>
       <div class="mt-5 flex flex-wrap gap-3">
         <a href="https://www.facebook.com/gamelightfam" target="_blank" rel="noopener"
